@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [{
+  "provider": "unpkg",
+  "library": "reactstrap@8.4.1",
+  "destination": "lib/reactstrap/",
+  "files": [
+    "lib/Form.js"
+  ]
+}
+]
+}

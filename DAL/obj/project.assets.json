@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\DAL\\DAL.csproj",
+      "projectUniqueName": "D:\\Lee\\SSMiniProgram-BG\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\DAL\\DAL.csproj",
+      "projectPath": "D:\\Lee\\SSMiniProgram-BG\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\leewo\\.nuget\\packages\\",
-      "outputPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\DAL\\obj\\",
+      "outputPath": "D:\\Lee\\SSMiniProgram-BG\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

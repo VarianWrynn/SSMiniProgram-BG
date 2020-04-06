@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SSMiniProgram</name>
+    </assembly>
+    <members>
+        <member name="M:SSMiniProgram.Controllers.WeatherForecastController.Get">
+            <summary>
+            那段时光已悄然离开，而我的心亦不复存在
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

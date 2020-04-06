@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\Services\\Services.csproj",
+      "projectUniqueName": "D:\\Lee\\SSMiniProgram-BG\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\Services\\Services.csproj",
+      "projectPath": "D:\\Lee\\SSMiniProgram-BG\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\leewo\\.nuget\\packages\\",
-      "outputPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\Services\\obj\\",
+      "outputPath": "D:\\Lee\\SSMiniProgram-BG\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
