@@ -1,0 +1,8 @@
+D:\Lee\SSMiniProgram\BG\SSMiniProgram\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+D:\Lee\SSMiniProgram\BG\SSMiniProgram\DAL\bin\Debug\netstandard2.0\DAL.dll
+D:\Lee\SSMiniProgram\BG\SSMiniProgram\DAL\bin\Debug\netstandard2.0\DAL.pdb
+D:\Lee\SSMiniProgram\BG\SSMiniProgram\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+D:\Lee\SSMiniProgram\BG\SSMiniProgram\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+D:\Lee\SSMiniProgram\BG\SSMiniProgram\DAL\obj\Debug\netstandard2.0\DAL.dll
+D:\Lee\SSMiniProgram\BG\SSMiniProgram\DAL\obj\Debug\netstandard2.0\DAL.pdb
+D:\Lee\SSMiniProgram\BG\SSMiniProgram\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
