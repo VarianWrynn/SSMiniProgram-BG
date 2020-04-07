@@ -4,6 +4,20 @@
         <name>SSMiniProgram</name>
     </assembly>
     <members>
+        <member name="M:SSMiniProgram.Controllers.ClassicController.GetByindex(System.Int32)">
+            <summary>
+            前端用这种方式获取到 https://localhost:5001/Classic/2/Previous
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSMiniProgram.Controllers.ClassicController.GetById2(System.Int32)">
+            <summary>
+            https://localhost:5001/Classic/GetById2?id=2 这种方式可以取到
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:SSMiniProgram.Controllers.WeatherForecastController.Get">
             <summary>
             那段时光已悄然离开，而我的心亦不复存在
