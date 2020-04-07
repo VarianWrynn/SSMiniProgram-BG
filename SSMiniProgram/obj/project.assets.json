@@ -6205,11 +6205,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\SSMiniProgram\\SSMiniProgram.csproj",
+      "projectUniqueName": "D:\\Lee\\SSMiniProgram-BG\\SSMiniProgram\\SSMiniProgram.csproj",
       "projectName": "SSMiniProgram",
-      "projectPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\SSMiniProgram\\SSMiniProgram.csproj",
+      "projectPath": "D:\\Lee\\SSMiniProgram-BG\\SSMiniProgram\\SSMiniProgram.csproj",
       "packagesPath": "C:\\Users\\leewo\\.nuget\\packages\\",
-      "outputPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\SSMiniProgram\\obj\\",
+      "outputPath": "D:\\Lee\\SSMiniProgram-BG\\SSMiniProgram\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6229,8 +6229,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\Model\\Model.csproj": {
-              "projectPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\Model\\Model.csproj"
+            "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj": {
+              "projectPath": "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj"
             }
           }
         }

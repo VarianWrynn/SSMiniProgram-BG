@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\SSMiniProgram\\SSMiniProgram.csproj": {}
+    "D:\\Lee\\SSMiniProgram-BG\\SSMiniProgram\\SSMiniProgram.csproj": {}
   },
   "projects": {
-    "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\Model\\Model.csproj": {
+    "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\Model\\Model.csproj",
+        "projectUniqueName": "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\Model\\Model.csproj",
+        "projectPath": "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\leewo\\.nuget\\packages\\",
-        "outputPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\Model\\obj\\",
+        "outputPath": "D:\\Lee\\SSMiniProgram-BG\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -63,14 +63,14 @@
         }
       }
     },
-    "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\SSMiniProgram\\SSMiniProgram.csproj": {
+    "D:\\Lee\\SSMiniProgram-BG\\SSMiniProgram\\SSMiniProgram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\SSMiniProgram\\SSMiniProgram.csproj",
+        "projectUniqueName": "D:\\Lee\\SSMiniProgram-BG\\SSMiniProgram\\SSMiniProgram.csproj",
         "projectName": "SSMiniProgram",
-        "projectPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\SSMiniProgram\\SSMiniProgram.csproj",
+        "projectPath": "D:\\Lee\\SSMiniProgram-BG\\SSMiniProgram\\SSMiniProgram.csproj",
         "packagesPath": "C:\\Users\\leewo\\.nuget\\packages\\",
-        "outputPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\SSMiniProgram\\obj\\",
+        "outputPath": "D:\\Lee\\SSMiniProgram-BG\\SSMiniProgram\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -90,8 +90,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\Model\\Model.csproj": {
-                "projectPath": "D:\\Lee\\SSMiniProgram\\BG\\SSMiniProgram\\Model\\Model.csproj"
+              "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj": {
+                "projectPath": "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj"
               }
             }
           }
