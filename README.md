@@ -53,7 +53,8 @@
 - 我曾经是一名程序员，后来转去做了产品5年，现在又转回来做开发。
 
 ## 参考链接
-
+1. [.Net Core 3 + EFCore - LUCIANO DE SOUSA PEREIRA - dev.to](https://dev.to/lucianopereira86/net-core-3-efcore-4jg5)
+2. [.Net Core 3 - Part 2 - MySQL](https://dev.to/lucianopereira86/net-core-web-api-part-2-mysql-3bje)
 
 ## 文档修订记录
 
