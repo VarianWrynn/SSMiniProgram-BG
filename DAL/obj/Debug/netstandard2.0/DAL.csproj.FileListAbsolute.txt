@@ -14,3 +14,6 @@ D:\Lee\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cach
 D:\Lee\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
 D:\Lee\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.dll
 D:\Lee\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.pdb
+D:\Lee\SSMiniProgram-BG\DAL\bin\Debug\netstandard2.0\Model.dll
+D:\Lee\SSMiniProgram-BG\DAL\bin\Debug\netstandard2.0\Model.pdb
+D:\Lee\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete

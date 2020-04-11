@@ -255,15 +255,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "MySql.Data.EntityFrameworkCore.Design/8.0.19": {
-        "type": "package",
-        "compile": {
-          "lib/net452/MySql.Data.EntityFrameworkCore.Design.dll": {}
-        },
-        "runtime": {
-          "lib/net452/MySql.Data.EntityFrameworkCore.Design.dll": {}
-        }
-      },
       "MySqlConnector/0.61.0": {
         "type": "package",
         "dependencies": {
@@ -430,6 +421,16 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Model.dll": {}
         }
       }
     }
@@ -829,19 +830,6 @@
         "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json"
-      ]
-    },
-    "MySql.Data.EntityFrameworkCore.Design/8.0.19": {
-      "sha512": "5SeMtEaPN6giRCP0HSYj3u51rWGlHL15ECax6TTG/xID2Ag4oDpxZGuQuk2zd4BFQCj7oNYeIgEHfQVFVDF4vw==",
-      "type": "package",
-      "path": "mysql.data.entityframeworkcore.design/8.0.19",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net452/MySql.Data.EntityFrameworkCore.Design.dll",
-        "lib/net452/MySql.Data.EntityFrameworkCore.Design.xml",
-        "mysql.data.entityframeworkcore.design.8.0.19.nupkg.sha512",
-        "mysql.data.entityframeworkcore.design.nuspec"
       ]
     },
     "MySqlConnector/0.61.0": {
@@ -1354,11 +1342,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Model/1.0.0": {
+      "type": "project",
+      "path": "../Model/Model.csproj",
+      "msbuildProject": "../Model/Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "MySql.Data.EntityFrameworkCore.Design >= 8.0.19",
+      "Model >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
       "Pomelo.EntityFrameworkCore.MySql >= 3.1.1",
       "Pomelo.EntityFrameworkCore.MySql.Design >= 1.1.2"
@@ -1394,7 +1387,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj": {
+              "projectPath": "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1406,10 +1403,6 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
-          "MySql.Data.EntityFrameworkCore.Design": {
-            "target": "Package",
-            "version": "[8.0.19, )"
-          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
@@ -1438,17 +1431,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'MySql.Data.EntityFrameworkCore.Design 8.0.19' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
-      "libraryId": "MySql.Data.EntityFrameworkCore.Design",
-      "targetGraphs": [
-        ".NETStandard,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }

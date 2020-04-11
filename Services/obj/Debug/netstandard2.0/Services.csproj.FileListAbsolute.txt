@@ -13,3 +13,4 @@ D:\Lee\SSMiniProgram-BG\Services\obj\Debug\netstandard2.0\Services.AssemblyInfoI
 D:\Lee\SSMiniProgram-BG\Services\obj\Debug\netstandard2.0\Services.AssemblyInfo.cs
 D:\Lee\SSMiniProgram-BG\Services\obj\Debug\netstandard2.0\Services.dll
 D:\Lee\SSMiniProgram-BG\Services\obj\Debug\netstandard2.0\Services.pdb
+D:\Lee\SSMiniProgram-BG\Services\obj\Debug\netstandard2.0\Services.csprojAssemblyReference.cache

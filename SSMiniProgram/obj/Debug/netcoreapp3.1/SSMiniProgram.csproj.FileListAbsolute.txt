@@ -195,8 +195,6 @@ D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Model.pdb
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.csprojAssemblyReference.cache
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\staticwebassets\SSMiniProgram.StaticWebAssets.Manifest.cache
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\staticwebassets\SSMiniProgram.StaticWebAssets.xml
-D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.MvcApplicationPartsAssemblyInfo.cs
-D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.MvcApplicationPartsAssemblyInfo.cache
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.AssemblyInfoInputs.cache
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.AssemblyInfo.cs
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.RazorTargetAssemblyInfo.cache
@@ -204,3 +202,17 @@ D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.cspr
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.dll
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.xml
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.pdb
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\DAL.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\DAL.pdb
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.Design.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.MvcApplicationPartsAssemblyInfo.cs
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.MvcApplicationPartsAssemblyInfo.cache

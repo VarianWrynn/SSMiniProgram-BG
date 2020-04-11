@@ -13,21 +13,46 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.IO;
+using DAL.Interface;
+using DAL.Repository;
+using Microsoft.EntityFrameworkCore;
+using Model;
 
 namespace SSMiniProgram
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+
+        public IConfigurationRoot Configuration { get; }
+        //public Startup(IConfiguration configuration)
+        public Startup(Microsoft.Extensions.Hosting.IHostEnvironment env)
         {
-            Configuration = configuration;
+            var appSettings = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            Configuration = appSettings;
         }
 
-        public IConfiguration Configuration { get; }
+       // public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            /*To be able to use the connection string anywhere in the code, 
+             * it's necessary to create a singleton of its model inside the
+             * Startup class.*/
+            ConnectionStrings con = new ConnectionStrings();
+            Configuration.Bind("ConnectionStrings", con);
+            services.AddSingleton(con);
+
+            services.AddScoped<ILeeTestRepository,LeeTestRepository>();
+
+            /*Create a service for the IUserRepository and inject the MySQL connection string 
+             * (from the appsettings.json) into DBContext:*/
+            services.AddDbContext<DBContext>(o => o.UseMySql(Configuration.GetConnectionString("MySQL")));
+
             services.AddControllers();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
