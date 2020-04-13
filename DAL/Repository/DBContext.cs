@@ -17,6 +17,8 @@ namespace DAL.Repository
         /// </summary>
         public DbSet<LeeTest> leeTest { get; set; }
 
+        public DbSet<Journal> journal { get; set; }
+
         /* 注意： 构造函数 DBContext 传递进去的类型必须是 DBContext，而不是小写的DbContext，否则就会报错
          InvalidOperationException: Unable to resolve service for type 'Microsoft.EntityFrameworkCore.
          DbContextOptions`1[Microsoft.EntityFrameworkCore.DbContext]' while attempting to activate 
@@ -46,6 +48,18 @@ namespace DAL.Repository
                 .Property(p => p.Id)
                 .ValueGeneratedOnAdd();
              
+            });
+
+            modelBilder.Entity<LeeTest>(e =>
+            {
+                e
+                .ToTable("Journal")
+                .HasKey(k => k.Id);
+
+                e
+                .Property(p => p.Id)
+                .ValueGeneratedOnAdd();
+
             });
 
             base.OnModelCreating(modelBilder);

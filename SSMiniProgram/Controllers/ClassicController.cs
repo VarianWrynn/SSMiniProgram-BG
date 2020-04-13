@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DAL.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 
@@ -10,28 +11,42 @@ namespace SSMiniProgram.Controllers
     [Route("[controller]")]
     public class ClassicController : Controller
     {
-        //public IActionResult Index()
+
+       
+        private readonly IJournalRepository repo;
+        public ClassicController(IJournalRepository r)
+        {
+            repo = r;
+        }
+
+        //[HttpGet]
+        //public JournalDTO Get()
         //{
+        //    return new JournalDTO
+        //    {
+        //        content = "浩瀚群星，璀璨如你",
+        //        fav_nums = 100,
+        //        id = 1,
+        //        image = "https://www.tmclee.com/Lee/images/img_bg_1.jpg",
+        //        index = 2,
+        //        like_status = 0,
+        //        pubdate = "2020-02-22",
+        //        title = "Shining Stars",
+        //        type = 100
+        //    };
 
         //}
 
-
         [HttpGet]
-        public Lates Get()
+        public async Task<IActionResult> Get()
         {
-            return new Lates
+            return await Task.Run(() =>
             {
-                content = "浩瀚群星，璀璨如你",
-                fav_nums = 100,
-                id = 1,
-                image = "https://www.tmclee.com/Lee/images/img_bg_1.jpg",
-                index = 2,
-                like_status = 0,
-                pubdate = "2020-02-22",
-                title = "Shining Stars",
-                type = 100
-            };
+                var result = repo.List(w =>
+                            (w.id == 1)).FirstOrDefault();//如果没有First()前端收到的JSON是数组形式[]
+                return Ok(result);
 
+            });
         }
 
 
@@ -41,10 +56,10 @@ namespace SSMiniProgram.Controllers
         /// <param name="index"></param>
         /// <returns></returns>
         [HttpGet(template:"{index}/previous",Name = "GetByindex")]
-        public Lates GetByindex(int index)
+        public JournalDTO GetByindex(int index)
         {
 
-            return new Lates
+            return new JournalDTO
             {
                 content = "相约头马，群星璀璨",
                 fav_nums = 118,
@@ -64,10 +79,10 @@ namespace SSMiniProgram.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("GetById2")]
-        public Lates GetById2(int id)
+        public JournalDTO GetById2(int id)
         {
 
-            return new Lates
+            return new JournalDTO
             {
                 content = "Leeeeeeeeee",
                 fav_nums = 118,

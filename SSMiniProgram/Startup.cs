@@ -48,6 +48,7 @@ namespace SSMiniProgram
             services.AddSingleton(con);
 
             services.AddScoped<ILeeTestRepository,LeeTestRepository>();
+            services.AddScoped<IJournalRepository, JournalRepository>();
 
             /*Create a service for the IUserRepository and inject the MySQL connection string 
              * (from the appsettings.json) into DBContext:*/
