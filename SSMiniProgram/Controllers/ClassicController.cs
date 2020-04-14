@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DAL.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Model;
+using Services;
 
 namespace SSMiniProgram.Controllers
 {
@@ -19,31 +20,20 @@ namespace SSMiniProgram.Controllers
             repo = r;
         }
 
-        //[HttpGet]
-        //public JournalDTO Get()
-        //{
-        //    return new JournalDTO
-        //    {
-        //        content = "浩瀚群星，璀璨如你",
-        //        fav_nums = 100,
-        //        id = 1,
-        //        image = "https://www.tmclee.com/Lee/images/img_bg_1.jpg",
-        //        index = 2,
-        //        like_status = 0,
-        //        pubdate = "2020-02-22",
-        //        title = "Shining Stars",
-        //        type = 100
-        //    };
-
-        //}
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             return await Task.Run(() =>
             {
+                //JournalServices jServices = new JournalServices(repo);
+                //return Ok(jServices.getJournal());
+                //var result = repo.List(w => (0 == 0)).FirstOrDefault();
+                //return Ok(result);
+
+
                 var result = repo.List(w =>
-                            (w.id == 1)).FirstOrDefault();//如果没有First()前端收到的JSON是数组形式[]
+                           (w.id == 1)).FirstOrDefault();//如果没有First()前端收到的JSON是数组形式[]
                 return Ok(result);
 
             });
@@ -55,22 +45,17 @@ namespace SSMiniProgram.Controllers
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>
-        [HttpGet(template:"{index}/previous",Name = "GetByindex")]
-        public JournalDTO GetByindex(int index)
+        [HttpGet(template: "{index}/previous", Name = "GetByindex")]
+        // public JournalDTO Get(int index)
+        public async Task<IActionResult> Get(int index)
         {
 
-            return new JournalDTO
+            return await Task.Run(() =>
             {
-                content = "相约头马，群星璀璨",
-                fav_nums = 118,
-                id = index,
-                image = "https://www.tmclee.com/Lee/images/3.jpg",
-                index = 3,
-                like_status = 0,
-                pubdate = "2020-02-22",
-                title = "You are my Shining Star",
-                type = 100
-            };
+                JournalServices jServices = new JournalServices(repo);
+                return Ok(jServices.getJournal(index));
+
+            });
         }
 
         /// <summary>

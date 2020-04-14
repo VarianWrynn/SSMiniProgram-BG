@@ -2530,6 +2530,19 @@
         "runtime": {
           "bin/placeholder/Model.dll": {}
         }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
       }
     }
   },
@@ -8068,6 +8081,11 @@
       "type": "project",
       "path": "../Model/Model.csproj",
       "msbuildProject": "../Model/Model.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8076,6 +8094,7 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
       "Model >= 1.0.0",
       "Pomelo.EntityFrameworkCore.MySql >= 3.1.1",
+      "Services >= 1.0.0",
       "Swashbuckle.AspNetCore.Swagger >= 5.2.1",
       "Swashbuckle.AspNetCore.SwaggerGen >= 5.2.1",
       "Swashbuckle.AspNetCore.SwaggerUI >= 5.2.1"
@@ -8117,6 +8136,9 @@
             },
             "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj": {
               "projectPath": "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj"
+            },
+            "D:\\Lee\\SSMiniProgram-BG\\Services\\Services.csproj": {
+              "projectPath": "D:\\Lee\\SSMiniProgram-BG\\Services\\Services.csproj"
             }
           }
         }

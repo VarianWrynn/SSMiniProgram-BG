@@ -229,3 +229,5 @@ D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.dll
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.xml
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.pdb
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.genruntimeconfig.cache
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Services.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Services.pdb
