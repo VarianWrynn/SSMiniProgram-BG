@@ -33,7 +33,7 @@ namespace SSMiniProgram.Controllers
 
 
                 var result = repo.List(w =>
-                           (w.id == 1)).FirstOrDefault();//如果没有First()前端收到的JSON是数组形式[]
+                           (1 == 1)).FirstOrDefault();//如果没有First()前端收到的JSON是数组形式[]
                 return Ok(result);
 
             });
