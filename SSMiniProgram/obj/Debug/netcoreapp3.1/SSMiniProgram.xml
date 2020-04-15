@@ -4,7 +4,7 @@
         <name>SSMiniProgram</name>
     </assembly>
     <members>
-        <member name="M:SSMiniProgram.Controllers.ClassicController.Get(System.Int32)">
+        <member name="M:SSMiniProgram.Controllers.ClassicController.previous(System.Int32)">
             <summary>
             前端用这种方式获取到 https://localhost:5001/Classic/2/Previous
             </summary>

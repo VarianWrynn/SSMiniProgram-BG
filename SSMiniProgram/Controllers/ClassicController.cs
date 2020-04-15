@@ -26,16 +26,8 @@ namespace SSMiniProgram.Controllers
         {
             return await Task.Run(() =>
             {
-                //JournalServices jServices = new JournalServices(repo);
-                //return Ok(jServices.getJournal());
-                //var result = repo.List(w => (0 == 0)).FirstOrDefault();
-                //return Ok(result);
-
-
-                var result = repo.List(w =>
-                           (1 == 1)).FirstOrDefault();//如果没有First()前端收到的JSON是数组形式[]
-                return Ok(result);
-
+                JournalServices jServices = new JournalServices(repo);
+                return Ok(jServices.getJournal());
             });
         }
 
@@ -45,17 +37,38 @@ namespace SSMiniProgram.Controllers
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>
-        [HttpGet(template: "{index}/previous", Name = "GetByindex")]
+        [HttpGet(template: "{index}/previous", Name = "previous")]
         // public JournalDTO Get(int index)
-        public async Task<IActionResult> Get(int index)
+        public async Task<IActionResult> previous(int index)
         {
 
             return await Task.Run(() =>
             {
                 JournalServices jServices = new JournalServices(repo);
-                return Ok(jServices.getJournal(index));
+                return Ok(jServices.getJournal(index-1));
 
             });
+        }
+
+        [HttpGet(template: "{index}/next", Name = "next")]
+        // public JournalDTO Get(int index)
+        public async Task<IActionResult> next(int index)
+        {
+
+            return await Task.Run(() =>
+            {
+                JournalServices jServices = new JournalServices(repo);
+                return Ok(jServices.getJournal(index+1));
+
+            });
+        }
+
+
+        [HttpGet(template: "{type}/{id}/favor", Name = "favor")]
+        public JournalDTO favor(int type, int id)
+        {
+
+            return null;
         }
 
         /// <summary>
