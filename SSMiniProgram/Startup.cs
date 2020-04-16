@@ -17,6 +17,7 @@ using DAL.Interface;
 using DAL.Repository;
 using Microsoft.EntityFrameworkCore;
 using Model;
+using Services;
 
 namespace SSMiniProgram
 {
@@ -49,6 +50,10 @@ namespace SSMiniProgram
 
             services.AddScoped<ILeeTestRepository,LeeTestRepository>();
             services.AddScoped<IJournalRepository, JournalRepository>();
+            services.AddScoped<IJournal_Member_LikesRepository, Journal_Member_LikesRepository>();
+            services.AddScoped<IMemberInfoRepository, MemberInfoRepository>();
+
+            services.AddScoped<IJournalServices, JournalServices>();
 
             /*Create a service for the IUserRepository and inject the MySQL connection string 
              * (from the appsettings.json) into DBContext:*/

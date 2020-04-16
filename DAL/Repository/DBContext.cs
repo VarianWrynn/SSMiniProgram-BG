@@ -50,10 +50,22 @@ namespace DAL.Repository
              
             });
 
-            modelBilder.Entity<LeeTest>(e =>
+            modelBilder.Entity<Journal>(e =>
             {
                 e
                 .ToTable("Journal")
+                .HasKey(k => k.id);
+
+                e
+                .Property(p => p.id)
+                .ValueGeneratedOnAdd();
+
+            });
+
+            modelBilder.Entity<Journal_Member_Likes>(e =>
+            {
+                e
+                .ToTable("Journal_Member_Likes")
                 .HasKey(k => k.Id);
 
                 e
@@ -61,6 +73,20 @@ namespace DAL.Repository
                 .ValueGeneratedOnAdd();
 
             });
+
+            modelBilder.Entity<MemberInfo>(e =>
+            {
+                e
+                .ToTable("MemberInfo")
+                .HasKey(k => k.MemberId);
+
+                e
+                .Property(p => p.MemberId)
+                .ValueGeneratedOnAdd();
+
+            });
+            
+
 
             base.OnModelCreating(modelBilder);
         }

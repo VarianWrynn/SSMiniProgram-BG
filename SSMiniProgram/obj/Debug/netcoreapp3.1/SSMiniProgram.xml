@@ -11,6 +11,14 @@
             <param name="index"></param>
             <returns></returns>
         </member>
+        <member name="M:SSMiniProgram.Controllers.ClassicController.favor(System.Int32,System.Int32)">
+            <summary>
+            获取点赞的数量，用于单独给翻页的时候用，避免缓存带来的数据不同步问题
+            </summary>
+            <param name="type"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:SSMiniProgram.Controllers.ClassicController.GetById2(System.Int32)">
             <summary>
             https://localhost:5001/Classic/GetById2?id=2 这种方式可以取到

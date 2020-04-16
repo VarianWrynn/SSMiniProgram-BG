@@ -12,12 +12,10 @@ namespace SSMiniProgram.Controllers
     [Route("[controller]")]
     public class ClassicController : Controller
     {
-
-       
-        private readonly IJournalRepository repo;
-        public ClassicController(IJournalRepository r)
+       private readonly IJournalServices jService;
+        public ClassicController(IJournalServices s)
         {
-            repo = r;
+            jService = s;
         }
 
 
@@ -26,8 +24,9 @@ namespace SSMiniProgram.Controllers
         {
             return await Task.Run(() =>
             {
-                JournalServices jServices = new JournalServices(repo);
-                return Ok(jServices.getJournal());
+                //JournalServices jServices = new JournalServices(repo);
+                //return Ok(jServices.getJournal());
+                return Ok(jService.getJournal());
             });
         }
 
@@ -44,9 +43,10 @@ namespace SSMiniProgram.Controllers
 
             return await Task.Run(() =>
             {
-                JournalServices jServices = new JournalServices(repo);
-                return Ok(jServices.getJournal(index-1));
-
+                //JournalServices jServices = new JournalServices(repo);
+                //return Ok(jServices.getJournal(index-1));
+                return Ok(jService.getJournal(index - 1));
+                
             });
         }
 
@@ -57,19 +57,47 @@ namespace SSMiniProgram.Controllers
 
             return await Task.Run(() =>
             {
-                JournalServices jServices = new JournalServices(repo);
-                return Ok(jServices.getJournal(index+1));
+                //JournalServices jServices = new JournalServices(repo);
+                //return Ok(jServices.getJournal(index+1));
+
+                return Ok(jService.getJournal(index + 1));
 
             });
         }
 
-
+        /// <summary>
+        /// 获取点赞的数量，用于单独给翻页的时候用，避免缓存带来的数据不同步问题
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet(template: "{type}/{id}/favor", Name = "favor")]
-        public JournalDTO favor(int type, int id)
+        public int favor(int type, int id)
         {
 
-            return null;
+            return 0;
         }
+
+        [HttpPost(template: "like/{isCancled}", Name = "CancleLike")]
+        public async Task<IActionResult> CancleLike([FromBody]int like_id)
+        {
+            return await Task.Run(() =>
+            {
+                jService.UpdateLikeStatus(like_id, true);
+                return Ok();
+            });
+        }
+
+        [HttpPost(template: "like", Name = "Like")]
+        public async Task<IActionResult> Like([FromBody]int like_id)
+        {
+            return await Task.Run(() =>
+            {
+                jService.UpdateLikeStatus(like_id, false);
+                return Ok();
+            });
+        }
+
 
         /// <summary>
         /// https://localhost:5001/Classic/GetById2?id=2 这种方式可以取到

@@ -25,6 +25,11 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
+        public int like_id { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public string image { get; set; }
 
         /// <summary>
