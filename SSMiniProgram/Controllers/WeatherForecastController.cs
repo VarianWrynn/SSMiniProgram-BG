@@ -43,6 +43,12 @@ namespace SSMiniProgram.Controllers
             .ToArray();
         }
 
+
+
+        /*以下这种形式会报错：AmbiguousMatchException: The request matched multiple endpoints. 
+         * Matches: SSMiniProgram.Controllers.WeatherForecastController.Get (SSMiniProgram)*/
+        //[HttpGet(Name = "GetQrCode")]
+        [HttpGet(template: "GetQrCode")] //url+ WeatherForecast/GetQrCode
         public FileResult GetQrCode(string ftpPath)
 
         {

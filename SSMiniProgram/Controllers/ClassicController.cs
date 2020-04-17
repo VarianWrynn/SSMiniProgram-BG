@@ -78,19 +78,24 @@ namespace SSMiniProgram.Controllers
             return 0;
         }
 
-        [HttpPost(template: "like/{isCancled}", Name = "CancleLike")]
-        public async Task<IActionResult> CancleLike([FromBody]int like_id)
+
+        //[HttpPost(template: "like", Name = "Like")] Like大小写敏感，坑爹呢 2020-4-17
+        [HttpPost(template: "like")]
+        public async Task<IActionResult> doLike([FromBody]int like_id)
         {
+            //var aa = cancled;
             return await Task.Run(() =>
             {
-                jService.UpdateLikeStatus(like_id, true);
+                jService.UpdateLikeStatus(like_id, false);
                 return Ok();
             });
         }
 
-        [HttpPost(template: "like", Name = "Like")]
-        public async Task<IActionResult> Like([FromBody]int like_id)
+       
+        [HttpPost(template: "like/cancel")]
+        public async Task<IActionResult> cancelLike([FromBody]int like_id)
         {
+            //var aa = cancled;
             return await Task.Run(() =>
             {
                 jService.UpdateLikeStatus(like_id, false);
