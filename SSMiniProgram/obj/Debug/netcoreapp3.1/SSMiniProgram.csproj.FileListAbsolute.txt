@@ -213,8 +213,10 @@ D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\DAL.dll
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Model.dll
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Services.dll
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\DAL.pdb
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Model.pdb
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Services.pdb
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.csprojAssemblyReference.cache
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.csproj.CoreCompileInputs.cache
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.MvcApplicationPartsAssemblyInfo.cs
@@ -229,5 +231,4 @@ D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.dll
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.xml
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.pdb
 D:\Lee\SSMiniProgram-BG\SSMiniProgram\obj\Debug\netcoreapp3.1\SSMiniProgram.genruntimeconfig.cache
-D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Services.dll
-D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\Services.pdb
+D:\Lee\SSMiniProgram-BG\SSMiniProgram\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BPMhQTh6oGq0iiEked2PlmSPs6IzYJjWDNB7sgYuZgOZ0AX6D8byV4mE0zetH/vknBLgekVOpAQeVOXAv9qyAA==",
+  "dgSpecHash": "HGEwbOG9Vtd8yQb89SrB17SK42XYzp7VCY6GJGKA/K+b1OHAz9NoIhN6cqCrwkQrnMHt8OcylmenlApgX5Oiaw==",
   "success": true,
   "projectFilePath": "D:\\Lee\\SSMiniProgram-BG\\Services\\Services.csproj",
   "expectedPackageFiles": [
@@ -44,7 +44,7 @@
     "C:\\Users\\leewo\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
     "C:\\Users\\leewo\\.nuget\\packages\\system.collections.concurrent\\4.0.12\\system.collections.concurrent.4.0.12.nupkg.sha512",
     "C:\\Users\\leewo\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
-    "C:\\Users\\leewo\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\leewo\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0-preview.2.20160.6\\system.componentmodel.annotations.5.0.0-preview.2.20160.6.nupkg.sha512",
     "C:\\Users\\leewo\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
     "C:\\Users\\leewo\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",
     "C:\\Users\\leewo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512",

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DAL.Repository
 {
@@ -19,6 +20,9 @@ namespace DAL.Repository
             entity_ = context.Set<T>();
         }
 
+        //public Task<T> FirstOrDefault(Expression<Func<T, bool>> predicate)
+        //   => context.Set<T>().FirstOrDefaultAsync(predicate);
+
         public IEnumerable<T> List(Expression<Func<T, bool>> expression)
         {
             return entity_.Where(expression).ToList();
@@ -28,6 +32,17 @@ namespace DAL.Repository
         {
             return entity_.Any(expression);
         }
+
+        public async Task AddAsync(T entity)
+        {
+            await context.Set<T>().AddAsync(entity);
+            await context.SaveChangesAsync();
+        }
+
+        /*https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members*/
+        public Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate) 
+            => context.Set<T>().FirstOrDefaultAsync(predicate);
+
 
         public T Save(T entity)
         {

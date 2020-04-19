@@ -79,30 +79,6 @@ namespace SSMiniProgram.Controllers
         }
 
 
-        //[HttpPost(template: "like", Name = "Like")] Like大小写敏感，坑爹呢 2020-4-17
-        [HttpPost(template: "like")]
-        public async Task<IActionResult> doLike([FromBody]int like_id)
-        {
-            //var aa = cancled;
-            return await Task.Run(() =>
-            {
-                jService.UpdateLikeStatus(like_id, false);
-                return Ok();
-            });
-        }
-
-       
-        [HttpPost(template: "like/cancel")]
-        public async Task<IActionResult> cancelLike([FromBody]int like_id)
-        {
-            //var aa = cancled;
-            return await Task.Run(() =>
-            {
-                jService.UpdateLikeStatus(like_id, false);
-                return Ok();
-            });
-        }
-
 
         /// <summary>
         /// https://localhost:5001/Classic/GetById2?id=2 这种方式可以取到

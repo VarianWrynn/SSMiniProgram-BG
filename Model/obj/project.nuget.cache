@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Vu+CAq0oranKVAsxaFsrhQUUw6cD2YdoJdrZrf15Iz3J64DkSx0u7r2uszMfPunugObcgaiCVOcDLloVVxk4lA==",
+  "dgSpecHash": "7WRkFw+okiVJaQQ83IzmJx2C6TrFpuwpEmsVLj0PWXsFFcDi2X1wy2C5q8PJ46dNK4I5eYht7ERCsKCsDObYdQ==",
   "success": true,
   "projectFilePath": "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leewo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\leewo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\leewo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\leewo\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0-preview.2.20160.6\\system.componentmodel.annotations.5.0.0-preview.2.20160.6.nupkg.sha512"
   ],
   "logs": []
 }

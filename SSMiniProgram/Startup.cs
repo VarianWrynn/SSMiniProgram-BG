@@ -48,10 +48,16 @@ namespace SSMiniProgram
             Configuration.Bind("ConnectionStrings", con);
             services.AddSingleton(con);
 
-            services.AddScoped<ILeeTestRepository,LeeTestRepository>();
+            services.AddScoped<ILeeTestRepository, LeeTestRepository>();
             services.AddScoped<IJournalRepository, JournalRepository>();
             services.AddScoped<IJournal_Member_LikesRepository, Journal_Member_LikesRepository>();
             services.AddScoped<IMemberInfoRepository, MemberInfoRepository>();
+
+            /*All you have to do to use this generic repository in ASP.NET Core is to add it in 
+             * Startup.ConfigureServices as a scoped service. With this, you will be able to 
+             * inject a repository of a specific entity at any time.
+             * https://blog.zhaytam.com/2019/03/14/generic-repository-pattern-csharp/*/
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 
             services.AddScoped<IJournalServices, JournalServices>();
 
