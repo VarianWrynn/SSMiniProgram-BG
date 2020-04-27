@@ -85,7 +85,31 @@ namespace DAL.Repository
                 .ValueGeneratedOnAdd();
 
             });
-            
+
+            modelBilder.Entity<Book>(e =>
+            {
+                e
+                    .ToTable("Book")
+                    .HasKey(k => k.book_id);
+
+                e
+                    .Property(p => p.book_id)
+                    .ValueGeneratedOnAdd();
+
+            });
+
+            modelBilder.Entity<book_member_like>(e =>
+            {
+                e
+                .ToTable("book_member_like")
+                .HasKey(k => k.book_like_id);
+
+                e
+                .Property(p => p.book_like_id)
+                .ValueGeneratedOnAdd();
+
+            });
+
 
 
             base.OnModelCreating(modelBilder);

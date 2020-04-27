@@ -1,10 +1,7 @@
 ﻿using DAL.Interface;
 using Model;
 using Model.POCOs;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Services
 {

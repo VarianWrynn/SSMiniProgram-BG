@@ -22,12 +22,7 @@ namespace SSMiniProgram.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return await Task.Run(() =>
-            {
-                //JournalServices jServices = new JournalServices(repo);
-                //return Ok(jServices.getJournal());
-                return Ok(jService.getJournal());
-            });
+            return await Task.Run(() => Ok(jService.getJournal()));//return Ok(jService.getJournal());
         }
 
 
@@ -38,31 +33,18 @@ namespace SSMiniProgram.Controllers
         /// <returns></returns>
         [HttpGet(template: "{index}/previous", Name = "previous")]
         // public JournalDTO Get(int index)
-        public async Task<IActionResult> previous(int index)
+        public async Task<IActionResult> Previous(int index)
         {
 
-            return await Task.Run(() =>
-            {
-                //JournalServices jServices = new JournalServices(repo);
-                //return Ok(jServices.getJournal(index-1));
-                return Ok(jService.getJournal(index - 1));
-                
-            });
+            return await Task.Run(() => Ok(jService.getJournal(index - 1)));
         }
 
         [HttpGet(template: "{index}/next", Name = "next")]
         // public JournalDTO Get(int index)
-        public async Task<IActionResult> next(int index)
+        public async Task<IActionResult> Next(int index)
         {
 
-            return await Task.Run(() =>
-            {
-                //JournalServices jServices = new JournalServices(repo);
-                //return Ok(jServices.getJournal(index+1));
-
-                return Ok(jService.getJournal(index + 1));
-
-            });
+            return await Task.Run(() => Ok(jService.getJournal(index + 1)));
         }
 
         /// <summary>

@@ -13,5 +13,4 @@ D:\Lee\SSMiniProgram-BG\Model\obj\Debug\netstandard2.0\Model.AssemblyInfoInputs.
 D:\Lee\SSMiniProgram-BG\Model\obj\Debug\netstandard2.0\Model.AssemblyInfo.cs
 D:\Lee\SSMiniProgram-BG\Model\obj\Debug\netstandard2.0\Model.dll
 D:\Lee\SSMiniProgram-BG\Model\obj\Debug\netstandard2.0\Model.pdb
-D:\Lee\SSMiniProgram-BG\Model\obj\Debug\netstandard2.0\Model.csprojAssemblyReference.cache
 D:\Lee\SSMiniProgram-BG\Model\obj\Debug\netstandard2.0\Model.csproj.CoreCompileInputs.cache
