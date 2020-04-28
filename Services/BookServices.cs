@@ -1,11 +1,12 @@
-﻿using DAL.Interface;
+﻿using System.Linq;
+using DAL.Interface;
 using Model;
 
 namespace Services
 {
     public interface IBookServices
     {
-        BookDTO getBooks(int index = 0);
+        BookDTO getBooks(int book_id = 0);
         bool Add(BookDTO model);
 
         bool Remove(BookDTO model);
@@ -22,9 +23,20 @@ namespace Services
             likeRep = like;
         }
 
-        public BookDTO getBooks(int index = 0)
+        public BookDTO getBooks(int book_id = 0)
         {
-            throw new System.NotImplementedException();
+            var ret = bookRep.List(r => r.book_id == 0 | r.book_id == book_id).FirstOrDefault();
+            var book = new BookDTO();
+            if (ret != null)
+            {
+                book.book_id = ret.book_id;
+                book.author = ret.author;
+                book.image = ret.image;
+                book.title = ret.title;
+                book.fav_nums = likeRep.List(r => r.book_id == ret.book_id).Count();
+            }
+
+            return book;
         }
 
         public bool Add(BookDTO model)
