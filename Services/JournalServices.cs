@@ -51,7 +51,7 @@ namespace Services
             dto.pubdate = result.pubdate.ConvertToString();
             dto.title = result.title;
             dto.type = result.type;
-            dto.like_status = like.Where(r => r.Member_Id == 1).Count();
+            dto.like_status = like.Count(r => r.Member_Id == 1);
             dto.fav_nums = like.Count();
             return dto;
         }

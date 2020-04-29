@@ -52,6 +52,8 @@ namespace SSMiniProgram
             services.AddScoped<IJournalRepository, JournalRepository>();
             services.AddScoped<IJournal_Member_LikesRepository, Journal_Member_LikesRepository>();
             services.AddScoped<IMemberInfoRepository, MemberInfoRepository>();
+            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<IBook_Member_Like_Repository, Book_Member_Like_Repository>();
 
             /*All you have to do to use this generic repository in ASP.NET Core is to add it in 
              * Startup.ConfigureServices as a scoped service. With this, you will be able to 
@@ -59,11 +61,14 @@ namespace SSMiniProgram
              * https://blog.zhaytam.com/2019/03/14/generic-repository-pattern-csharp/*/
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 
-            services.AddScoped<IJournalServices, JournalServices>();
-
             /*Create a service for the IUserRepository and inject the MySQL connection string 
              * (from the appsettings.json) into DBContext:*/
             services.AddDbContext<DBContext>(o => o.UseMySql(Configuration.GetConnectionString("MySQL")));
+
+
+            //Service
+            services.AddScoped<IJournalServices, JournalServices>();
+            services.AddScoped<IBookServices, BookServices>();
 
             services.AddControllers();
 
