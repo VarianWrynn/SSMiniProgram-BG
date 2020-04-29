@@ -19,7 +19,8 @@ namespace SSMiniProgram.Controllers
         }
 
 
-        [HttpGet]
+        
+        [HttpGet(template: "hot_list")]
         public async Task<IActionResult> Get()
         {
             return await Task.Run(() => Ok(bService.getBookList())); //return Ok(jService.getJournal());

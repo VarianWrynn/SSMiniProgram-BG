@@ -16,6 +16,9 @@ namespace Services
     {
         private readonly IJournalRepository jPo;
         private readonly IJournal_Member_LikesRepository lPo;
+
+        private readonly string _myUrl = $@"https://localhost:5001/";
+
         public JournalServices(IJournalRepository r, IJournal_Member_LikesRepository l)
         {
             jPo = r;
