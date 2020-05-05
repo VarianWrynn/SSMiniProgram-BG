@@ -23,7 +23,7 @@ namespace SSMiniProgram.Controllers
         [HttpGet(template: "hot_list")]
         public async Task<IActionResult> Get()
         {
-            return await Task.Run(() => Ok(bService.getBookList())); //return Ok(jService.getJournal());
+            return await Task.Run(() => Ok(bService.GetBookList())); //return Ok(jService.getJournal());
         }
     }
 }
