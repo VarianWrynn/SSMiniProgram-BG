@@ -34,11 +34,12 @@ namespace DAL.Repository
 
         /// <summary>
         /// Inside the OnModelCreating, you need to mirror each model with its respective table.
+        /// https://docs.microsoft.com/zh-cn/ef/core/modeling/relationships?tabs=fluent-api%2Cfluent-api-simple-key%2Csimple-key#other-relationship-patterns
         /// </summary>  
-        /// <param name="modelBilder"></param>
-        protected override void OnModelCreating(ModelBuilder modelBilder)
+        /// <param name="modelBuilder"></param>
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBilder.Entity<LeeTest>(e =>
+            modelBuilder.Entity<LeeTest>(e =>
             {
                 e
                 .ToTable("LeeTest")
@@ -50,7 +51,7 @@ namespace DAL.Repository
              
             });
 
-            modelBilder.Entity<Journal>(e =>
+            modelBuilder.Entity<Journal>(e =>
             {
                 e
                 .ToTable("Journal")
@@ -62,7 +63,7 @@ namespace DAL.Repository
 
             });
 
-            modelBilder.Entity<Journal_Member_Likes>(e =>
+            modelBuilder.Entity<Journal_Member_Likes>(e =>
             {
                 e
                 .ToTable("Journal_Member_Likes")
@@ -74,7 +75,7 @@ namespace DAL.Repository
 
             });
 
-            modelBilder.Entity<MemberInfo>(e =>
+            modelBuilder.Entity<MemberInfo>(e =>
             {
                 e
                 .ToTable("MemberInfo")
@@ -86,7 +87,7 @@ namespace DAL.Repository
 
             });
 
-            modelBilder.Entity<Book>(e =>
+            modelBuilder.Entity<Book>(e =>
             {
                 e
                     .ToTable("Book")
@@ -95,10 +96,14 @@ namespace DAL.Repository
                 e
                     .Property(p => p.book_id)
                     .ValueGeneratedOnAdd();
+                e
+                    .HasOne(b => b.book_detail) //added by Lee on May 8,2020
+                    .WithOne(i => i.book)
+                    .HasForeignKey<book_detail>(d => d.detail_id);
 
             });
 
-            modelBilder.Entity<book_member_like>(e =>
+            modelBuilder.Entity<book_member_like>(e =>
             {
                 e
                 .ToTable("book_member_like")
@@ -112,7 +117,7 @@ namespace DAL.Repository
 
 
 
-            base.OnModelCreating(modelBilder);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
