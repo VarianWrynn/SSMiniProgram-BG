@@ -1,9 +1,14 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Model.POCOs
 {
     public class book_detail
     {
+
+        [Key]
+        public int detail_id { get; set; }
+
         public string author { get; set; }
         public string binding { get; set; }
         public string category { get; set; }
@@ -15,7 +20,7 @@ namespace Model.POCOs
         public string translator { get; set; }
         public DateTime? pubdate { get; set; }
 
-        public int detail_id { get; set; }
+
         public int? pages { get; set; }
         public double? price { get; set; }
 
