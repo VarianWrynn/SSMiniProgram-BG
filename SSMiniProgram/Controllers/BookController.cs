@@ -25,5 +25,39 @@ namespace SSMiniProgram.Controllers
         {
             return await Task.Run(() => Ok(bService.GetBookList())); //return Ok(jService.getJournal());
         }
+
+
+
+
+        /// <summary>
+        /// 获取书籍的详细内容
+        /// 前端用这种方式获取到 https://localhost:5001/Book/2/detail
+        /// </summary>
+        /// <param name="bid"></param>
+        /// <returns></returns>
+        [HttpGet(template: "{bid}/detail", Name = "GetDetail")]
+        public async Task<IActionResult> GetDetail(int bid)
+        {
+
+            return await Task.Run(Ok);
+        }
+
+        [HttpGet(template: "favor/count",Name = "getMyBookCount")]
+        public async Task<IActionResult> GetMyBookCount()
+        {
+            return await Task.Run(()=>Ok(100));
+        }
+
+       [HttpGet(template: "{bid}/short_comment",Name = "GetComments")]
+        public async Task<IActionResult> GetComments()
+        {
+            return await Task.Run(() => Ok("Leeeeeeeeeeeeeeeeeee"));
+        }
+
+        [HttpGet(template:"{bid}/favor",Name = "GetLikeStatus")]
+        public async Task<IActionResult> GetLikeStatus()
+        {
+            return await Task.Run(() => Ok(true));
+        }
     }
 }

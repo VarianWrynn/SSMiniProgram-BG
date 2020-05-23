@@ -4,6 +4,14 @@
         <name>SSMiniProgram</name>
     </assembly>
     <members>
+        <member name="M:SSMiniProgram.Controllers.BookController.GetDetail(System.Int32)">
+            <summary>
+            获取书籍的详细内容
+            前端用这种方式获取到 https://localhost:5001/Book/2/detail
+            </summary>
+            <param name="bid"></param>
+            <returns></returns>
+        </member>
         <member name="M:SSMiniProgram.Controllers.ClassicController.Previous(System.Int32)">
             <summary>
             前端用这种方式获取到 https://localhost:5001/Classic/2/Previous
