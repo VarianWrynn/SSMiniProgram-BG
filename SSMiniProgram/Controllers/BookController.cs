@@ -38,8 +38,8 @@ namespace SSMiniProgram.Controllers
         [HttpGet(template: "{bid}/detail", Name = "GetDetail")]
         public async Task<IActionResult> GetDetail(int bid)
         {
-
-            return await Task.Run(Ok);
+            //return await Task.Run(() => Ok(bService.GetBookList())); //return Ok(jService.getJournal());
+            return await Task.Run(()=>Ok(bService.GetBook(bid)));
         }
 
         [HttpGet(template: "favor/count",Name = "getMyBookCount")]
