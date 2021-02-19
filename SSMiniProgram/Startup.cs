@@ -54,6 +54,7 @@ namespace SSMiniProgram
             services.AddScoped<IMemberInfoRepository, MemberInfoRepository>();
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<IBook_Member_Like_Repository, Book_Member_Like_Repository>();
+            services.AddScoped<IBook_CommentsRepository, Book_CommentsRepository>();
 
             /*All you have to do to use this generic repository in ASP.NET Core is to add it in 
              * Startup.ConfigureServices as a scoped service. With this, you will be able to 

@@ -1,4 +1,6 @@
-﻿namespace Model.POCOs
+﻿using System.Collections.Generic;
+
+namespace Model.POCOs
 {
     public class Book
     {
@@ -31,5 +33,12 @@
         public string title { get; set; }
 
         public book_detail book_detail { get; set; }
+
+        /// <summary>
+        /// 这样子，在查找短评的时候，就不需要再单独写一个Ibook_comments_repository类在Service成去做查询了
+        ///
+        /// 2021-2-19 21:05:30
+        /// </summary>
+        public List<book_comments> book_comments_list { get; set; }
     }
 }

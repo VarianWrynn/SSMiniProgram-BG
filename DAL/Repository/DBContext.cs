@@ -115,6 +115,17 @@ namespace DAL.Repository
 
             });
 
+            modelBuilder.Entity<book_comments>(e =>
+            {
+                e
+                    .ToTable("book_comments")
+                    .HasKey(k => k.comment_id);
+
+                e
+                    .Property(p => p.comment_id)
+                    .ValueGeneratedOnAdd();
+
+            });
 
 
             base.OnModelCreating(modelBuilder);

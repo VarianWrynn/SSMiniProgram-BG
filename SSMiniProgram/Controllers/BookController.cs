@@ -49,9 +49,10 @@ namespace SSMiniProgram.Controllers
         }
 
        [HttpGet(template: "{bid}/short_comment",Name = "GetComments")]
-        public async Task<IActionResult> GetComments()
+        public async Task<IActionResult> GetComments(int bid)
         {
-            return await Task.Run(() => Ok("Leeeeeeeeeeeeeeeeeee"));
+           // return await Task.Run(() => Ok("Leeeeeeeeeeeeeeeeeee"));
+           return await Task.Run(()=>Ok(bService.GetComments(bid)));
         }
 
         [HttpGet(template:"{bid}/favor",Name = "GetLikeStatus")]

@@ -2,6 +2,7 @@
 using System.Linq;
 using DAL.Interface;
 using Model;
+using Model.DTO;
 
 namespace Services
 {
@@ -13,6 +14,8 @@ namespace Services
         bool Remove(BookDTO model);
 
         List<BookDTO> GetBookList();
+
+        List<book_comments_DTO> GetComments(int book_id);
     }
 
     public class BookServices : IBookServices
@@ -55,6 +58,22 @@ namespace Services
                 like_status = _likeRep.List(l => l.book_id == r.book_id).Count()
             });
             return ret.ToList();
+        }
+
+
+        /// <summary>
+        /// 这里其实应该用Redist来实现，减少DB查询
+        /// </summary>
+        /// <returns></returns>
+        public List<book_comments_DTO> GetComments(int book_id)
+        {
+            var retTemp = _bookRep.List(r => r.book_id == book_id)
+                .FirstOrDefault();
+            return retTemp?.book_comments_list.Select(l => new book_comments_DTO // if (retTemp == null)
+            {
+                book_id = l.book_id.ConvertToNotNull(),
+                comment = l.comment
+            }).ToList();
         }
 
         public bool Add(BookDTO model)
