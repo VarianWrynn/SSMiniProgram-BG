@@ -22,11 +22,19 @@ namespace Services
     {
         private readonly IBookRepository _bookRep;
         private readonly IBook_Member_Like_Repository _likeRep;
+        private readonly IBook_CommentsRepository _bookComRep;
 
-        public BookServices(IBookRepository book, IBook_Member_Like_Repository like)
+        /// <summary>
+        /// 在这里可以根据表的拓展，随时注入新的表的接口，比如IBook_Comments_Repository
+        /// 2021-2-21 10:53:03
+        /// </summary>
+        /// <param name="book"></param>
+        /// <param name="like"></param>
+        public BookServices(IBookRepository book, IBook_Member_Like_Repository like, IBook_CommentsRepository bookCom)
         {
             _bookRep = book;
             _likeRep = like;
+            _bookComRep = bookCom;
         }
 
         public BookDTO GetBook(int book_id = 0)
@@ -67,13 +75,28 @@ namespace Services
         /// <returns></returns>
         public List<book_comments_DTO> GetComments(int book_id)
         {
-            var retTemp = _bookRep.List(r => r.book_id == book_id)
+            /*var retTemp = _bookRep.List(r => r.book_id == book_id)
                 .FirstOrDefault();
-            return retTemp?.book_comments_list.Select(l => new book_comments_DTO // if (retTemp == null)
+            //return retTemp?.book_comments_list.Select(l => new book_comments_DTO // if (retTemp == null)
+            if (retTemp?.book_comments_list == null)// if (retTemp == null || retTemp.book_comments_list == null)
+            {
+                return new List<book_comments_DTO>();
+            }
+
+            return retTemp.book_comments_list.Select(l => new book_comments_DTO
             {
                 book_id = l.book_id.ConvertToNotNull(),
                 comment = l.comment
-            }).ToList();
+            }).ToList();*/
+
+            return _bookComRep
+                .List(r => r.book_id == book_id)
+                .Select(l => new book_comments_DTO
+                {
+                    book_id = l.book_id.ConvertToNotNull(),
+                    comment_id = l.comment_id,
+                    comment = l.comment
+                }).ToList();
         }
 
         public bool Add(BookDTO model)
