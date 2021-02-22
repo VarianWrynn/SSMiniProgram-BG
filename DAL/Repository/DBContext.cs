@@ -101,7 +101,13 @@ namespace DAL.Repository
                     .WithOne(i => i.book)
                     .HasForeignKey<book_detail>(d => d.detail_id);
 
+                e
+                    .HasMany(r => r.book_comments_list) //一个文章包含多个短评
+                    .WithOne(l => l.book) //一个短评只归属于一个文章
+                    .HasForeignKey(k => k.book_id);
+
             });
+            //https://docs.microsoft.com/en-us/ef/core/modeling/relationships?tabs=fluent-api%2Cfluent-api-simple-key%2Csimple-key
 
             modelBuilder.Entity<book_member_like>(e =>
             {
@@ -124,6 +130,8 @@ namespace DAL.Repository
                 e
                     .Property(p => p.comment_id)
                     .ValueGeneratedOnAdd();
+                //e
+                //    .Property(t => t.book_id).HasColumnName("book_id");
 
             });
 
