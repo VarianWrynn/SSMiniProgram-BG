@@ -106,6 +106,7 @@ namespace DAL.Repository
                     .WithOne(l => l.book) //一个短评只归属于一个文章
                     .HasForeignKey(k => k.book_id);
 
+
             });
             //https://docs.microsoft.com/en-us/ef/core/modeling/relationships?tabs=fluent-api%2Cfluent-api-simple-key%2Csimple-key
 
