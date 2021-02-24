@@ -89,11 +89,14 @@ namespace Services
                 comment = l.comment
             }).ToList();*/
 
+            //MySqlException: Unknown column 'b.book_id1' in 'field list'
+            //  var ret = _bookComRep.List(r => r.book_id == book_id);
+
             return _bookComRep
                 .List(r => r.book_id == book_id)
                 .Select(l => new book_comments_DTO
                 {
-                    book_id = l.book_id.ConvertToNotNull(),
+                    //book_id = l.book_id.ConvertToNotNull(),
                     comment_id = l.comment_id,
                     comment = l.comment
                 }).ToList();

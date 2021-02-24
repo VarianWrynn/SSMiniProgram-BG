@@ -13,7 +13,8 @@ namespace Model.POCOs
         public string comment { get; set; }
         public int? book_id { get; set; }
 
-        [Key]
-        public int comment_id { get; set; }
+        [Key] public int comment_id { get; set; }
+
+        public Book book { get; set; }
     }
 }
