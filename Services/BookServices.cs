@@ -96,9 +96,10 @@ namespace Services
                 .List(r => r.book_id == book_id)
                 .Select(l => new book_comments_DTO
                 {
-                    //book_id = l.book_id.ConvertToNotNull(),
+                    book_id = l.book_id.ConvertToNotNull(),
                     comment_id = l.comment_id,
-                    comment = l.comment
+                    comment = l.comment,
+                    agree_num = l.agree_num.ConvertToNotNull()
                 }).ToList();
         }
 

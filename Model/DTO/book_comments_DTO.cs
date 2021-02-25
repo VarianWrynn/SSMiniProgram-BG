@@ -15,5 +15,7 @@ namespace Model.DTO
         public int book_id { get; set; }
 
         public int comment_id { get; set; }
+
+        public int agree_num { get; set; }
     }
 }
