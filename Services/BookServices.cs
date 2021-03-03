@@ -37,10 +37,10 @@ namespace Services
             _bookComRep = bookCom;
         }
 
-        public BookDTO GetBook(int book_id = 0)
+        public BookDetailDTO GetBook(int book_id = 0)
         {
             var ret = _bookRep.List(r => r.book_id == 0 | r.book_id == book_id).FirstOrDefault();
-            var book = new BookDTO();
+            var book = new BookDetailDTO();
             if (ret == null) return book;
             {
                 book.book_id = ret.book_id;

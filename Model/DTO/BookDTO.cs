@@ -31,5 +31,6 @@
         /// 书籍题目
         /// </summary>
         public string title { get; set; }
+
     }
 }
