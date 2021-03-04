@@ -12,17 +12,18 @@ namespace Services
         /// </summary>
         /// <param name="val"></param>
         /// <returns></returns>
-        public static int ConvertToNotNull(this Nullable<int> val)
+        public static int ConvertToNotNull(this int? val)//Nullable<long> ==> int?
         {
-            return val.HasValue ? val.Value : 0;
+            return val ?? 0;
+            // return val.HasValue ? val.Value : 0;
         }
 
-        public static long ConvertToNotNull(this Nullable<long> val)
+        public static long ConvertToNotNull(this long? val)
         {
-            return val.HasValue ? val.Value : 0;
+            return val ?? 0;
         }
 
-        public static double ConvertToNotNull(this Nullable<double> val)
+        public static double ConvertToNotNull(this double? val)
         {
             return val.HasValue ? val.Value : 0;
         }

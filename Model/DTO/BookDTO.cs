@@ -32,5 +32,7 @@
         /// </summary>
         public string title { get; set; }
 
+        public BookDetailDTO bookDetail { get; set; }
+
     }
 }

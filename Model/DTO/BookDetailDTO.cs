@@ -32,6 +32,8 @@ namespace Model
         /// </summary>
         public int book_id { get; set; }
 
+        public int detail_id { get; set; }
+
         /// <summary>
         /// 
         /// </summary>

@@ -23,6 +23,7 @@ namespace Services
         private readonly IBookRepository _bookRep;
         private readonly IBook_Member_Like_Repository _likeRep;
         private readonly IBook_CommentsRepository _bookComRep;
+        private readonly IBook_DetailRepository _bookDetailRep;
 
         /// <summary>
         /// 在这里可以根据表的拓展，随时注入新的表的接口，比如IBook_Comments_Repository
@@ -30,23 +31,27 @@ namespace Services
         /// </summary>
         /// <param name="book"></param>
         /// <param name="like"></param>
-        public BookServices(IBookRepository book, IBook_Member_Like_Repository like, IBook_CommentsRepository bookCom)
+        public BookServices(IBookRepository book, IBook_Member_Like_Repository like, 
+            IBook_CommentsRepository bookCom, IBook_DetailRepository bookDet)
         {
             _bookRep = book;
             _likeRep = like;
             _bookComRep = bookCom;
+            _bookDetailRep = bookDet;
         }
 
-        public BookDetailDTO GetBook(int book_id = 0)
+        public BookDTO GetBook(int book_id = 0)
         {
             var ret = _bookRep.List(r => r.book_id == 0 | r.book_id == book_id).FirstOrDefault();
-            var book = new BookDetailDTO();
+            //var ret = _bookDetailRep.List(r=>r.book_id==book_id).FirstOrDefault();
+            var book = new BookDTO();
             if (ret == null) return book;
             {
                 book.book_id = ret.book_id;
                 book.author = ret.author;
                 book.image = ret.image;
                 book.title = ret.title;
+                book.bookDetail = ret.book_detail.;//
                 book.fav_nums = _likeRep.List(r => r.book_id == ret.book_id).Count();
                 book.like_status = _likeRep.List(r => r.book_id == ret.book_id).Count();
             }

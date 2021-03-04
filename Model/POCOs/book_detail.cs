@@ -9,6 +9,9 @@ namespace Model.POCOs
         [Key]
         public int detail_id { get; set; }
 
+
+        public int? book_id { get; set; }
+
         public string author { get; set; }
         public string binding { get; set; }
         public string category { get; set; }
