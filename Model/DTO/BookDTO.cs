@@ -32,6 +32,8 @@
         /// </summary>
         public string title { get; set; }
 
+        public string Summary { get; set; }
+        
         public BookDetailDTO bookDetail { get; set; }
 
     }
