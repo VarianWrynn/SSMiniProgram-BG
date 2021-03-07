@@ -51,7 +51,7 @@ namespace Services
                 book.author = ret.author;
                 book.image = ret.image;
                 book.title = ret.title;
-                book.bookDetail = ret.book_detail.;//
+                book.Summary = _bookDetailRep.List(o => o.book_id == book_id).FirstOrDefault()?.summary;
                 book.fav_nums = _likeRep.List(r => r.book_id == ret.book_id).Count();
                 book.like_status = _likeRep.List(r => r.book_id == ret.book_id).Count();
             }
