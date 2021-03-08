@@ -18,3 +18,15 @@ D:\Lee\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
 D:\Lee\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 D:\Lee\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.dll
 D:\Lee\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.pdb
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\bin\Debug\netstandard2.0\DAL.dll
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\bin\Debug\netstandard2.0\DAL.pdb
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\bin\Debug\netstandard2.0\Model.dll
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\bin\Debug\netstandard2.0\Model.pdb
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.dll
+F:\Lee\Githubs\SSMiniProgram-BG\DAL\obj\Debug\netstandard2.0\DAL.pdb
