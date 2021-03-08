@@ -4920,23 +4920,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leewo\\.nuget\\packages\\": {},
+    "C:\\Users\\lee.wang\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Lee\\SSMiniProgram-BG\\DAL\\DAL.csproj",
+      "projectUniqueName": "F:\\Lee\\Githubs\\SSMiniProgram-BG\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "D:\\Lee\\SSMiniProgram-BG\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\leewo\\.nuget\\packages\\",
-      "outputPath": "D:\\Lee\\SSMiniProgram-BG\\DAL\\obj\\",
+      "projectPath": "F:\\Lee\\Githubs\\SSMiniProgram-BG\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\lee.wang\\.nuget\\packages\\",
+      "outputPath": "F:\\Lee\\Githubs\\SSMiniProgram-BG\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\leewo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lee.wang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4949,9 +4949,10 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj": {
-              "projectPath": "D:\\Lee\\SSMiniProgram-BG\\Model\\Model.csproj"
+            "F:\\Lee\\Githubs\\SSMiniProgram-BG\\Model\\Model.csproj": {
+              "projectPath": "F:\\Lee\\Githubs\\SSMiniProgram-BG\\Model\\Model.csproj"
             }
           }
         }
@@ -4964,6 +4965,7 @@
     },
     "frameworks": {
       "netstandard2.0": {
+        "targetAlias": "netstandard2.0",
         "dependencies": {
           "MySql.Data.EntityFrameworkCore": {
             "target": "Package",
@@ -4994,7 +4996,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
