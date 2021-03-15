@@ -19,10 +19,12 @@ namespace Services
 
         private readonly string _myUrl = $@"https://localhost:5001/";
 
-        public JournalServices(IJournalRepository r, IJournal_Member_LikesRepository l)
+        //public JournalServices(IJournalRepository r, IJournal_Member_LikesRepository l)
+        // 如果是这种方式，则需要在Startup类上注入每一个接口和类
+        public JournalServices(IBaseRepository<Journal> r, IBaseRepository<Journal_Member_Likes> l)
         {
-            jPo = r;
-            lPo = l;
+            jPo = (IJournalRepository)r;
+            lPo = (IJournal_Member_LikesRepository)l;
         }
 
         public bool Add(Journal_Member_Likes model)

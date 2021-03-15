@@ -19,6 +19,14 @@ using Microsoft.EntityFrameworkCore;
 using Model;
 using Services;
 
+#if DEBUG
+#else
+[assembly:ApiController]
+#endif
+//The above setup will automatically propagate the [ApiController] feature to 
+//all controllers discovered in this assembly.
+// https://www.strathweb.com/2019/01/enabling-apicontroller-globally-in-asp-net-core-2-2/
+// https://www.cnblogs.com/aqgy12138/p/13419027.html
 namespace SSMiniProgram
 {
     public class Startup
@@ -48,13 +56,13 @@ namespace SSMiniProgram
             Configuration.Bind("ConnectionStrings", con);
             services.AddSingleton(con);
 
-            services.AddScoped<ILeeTestRepository, LeeTestRepository>();
+            /*services.AddScoped<ILeeTestRepository, LeeTestRepository>();
             services.AddScoped<IJournalRepository, JournalRepository>();
             services.AddScoped<IJournal_Member_LikesRepository, Journal_Member_LikesRepository>();
             services.AddScoped<IMemberInfoRepository, MemberInfoRepository>();
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<IBook_Member_Like_Repository, Book_Member_Like_Repository>();
-            services.AddScoped<IBook_CommentsRepository, Book_CommentsRepository>();
+            services.AddScoped<IBook_CommentsRepository, Book_CommentsRepository>();*/
 
             /*All you have to do to use this generic repository in ASP.NET Core is to add it in 
              * Startup.ConfigureServices as a scoped service. With this, you will be able to 

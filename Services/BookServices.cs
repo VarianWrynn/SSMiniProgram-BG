@@ -3,6 +3,7 @@ using System.Linq;
 using DAL.Interface;
 using Model;
 using Model.DTO;
+using Model.POCOs;
 
 namespace Services
 {
@@ -31,13 +32,22 @@ namespace Services
         /// </summary>
         /// <param name="book"></param>
         /// <param name="like"></param>
-        public BookServices(IBookRepository book, IBook_Member_Like_Repository like, 
-            IBook_CommentsRepository bookCom, IBook_DetailRepository bookDet)
+        //public BookServices(IBookRepository book, IBook_Member_Like_Repository like, 
+        //    IBook_CommentsRepository bookCom, IBook_DetailRepository bookDet)
+        //{
+        //    _bookRep = book;
+        //    _likeRep = like;
+        //    _bookComRep = bookCom;
+        //    _bookDetailRep = bookDet;
+        //}
+
+        public BookServices(IBaseRepository<Book> book, IBaseRepository<Journal_Member_Likes> like,
+    IBaseRepository<book_comments> bookCom, IBaseRepository<book_detail> bookDet)
         {
-            _bookRep = book;
-            _likeRep = like;
-            _bookComRep = bookCom;
-            _bookDetailRep = bookDet;
+            _bookRep = (IBookRepository)book;
+            _likeRep = (IBook_Member_Like_Repository)like;
+            _bookComRep = (IBook_CommentsRepository)bookCom;
+            _bookDetailRep = (IBook_DetailRepository)bookDet;
         }
 
         public BookDTO GetBook(int book_id = 0)
