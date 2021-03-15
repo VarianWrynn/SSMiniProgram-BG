@@ -6,12 +6,17 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using CommonLib;
+
+//在System.Web.Http空间下也存在一个[Route("[controller]")]属性
+//https://jasonwatmore.com/post/2019/10/14/aspnet-core-3-simple-api-for-authentication-registration-and-user-management
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 
 namespace SSMiniProgram.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
