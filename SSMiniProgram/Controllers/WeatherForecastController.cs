@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using CommonLib;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -34,7 +35,8 @@ namespace SSMiniProgram.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            
+
+            LoggerManager.Info("This is a test");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

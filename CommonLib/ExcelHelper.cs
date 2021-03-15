@@ -101,6 +101,7 @@ namespace CommonLib
                                         {
                                             font.FontHeightInPoints = 20;
                                             font.Boldweight = 700;
+                                            font.IsBold = true;
                                             headStyle.SetFont(font);
                                         }
 
