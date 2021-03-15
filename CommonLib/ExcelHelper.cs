@@ -33,9 +33,9 @@ namespace CommonLib
             //    workbook.DocumentSummaryInformation = dsi;
 
             //    SummaryInformation si = PropertySetFactory.CreateSummaryInformation();
-            //    si.Author = "柳永法"; //填加xls文件作者信息
+            //    si.Author = "Lee"; //填加xls文件作者信息
             //    si.ApplicationName = "NPOI测试程序"; //填加xls文件创建程序信息
-            //    si.LastAuthor = "柳永法2"; //填加xls文件最后保存者信息
+            //    si.LastAuthor = "宋轶"; //填加xls文件最后保存者信息
             //    si.Comments = "说明信息"; //填加xls文件作者信息
             //    si.Title = "NPOI测试"; //填加xls文件标题信息
             //    si.Subject = "NPOI测试Demo"; //填加文件主题信息
