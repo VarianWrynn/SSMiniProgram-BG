@@ -26,6 +26,8 @@ namespace Services
         private readonly IBook_CommentsRepository _bookComRep;
         private readonly IBook_DetailRepository _bookDetailRep;
 
+
+
         /// <summary>
         /// 在这里可以根据表的拓展，随时注入新的表的接口，比如IBook_Comments_Repository
         /// 2021-2-21 10:53:03
