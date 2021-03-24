@@ -16,7 +16,7 @@ using Microsoft.Extensions.Logging;
 
 namespace SSMiniProgram.Controllers
 {
-    [Authorize]
+    //[Authorize] No authenticationScheme was specified, and there was no DefaultChallengeScheme found
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
