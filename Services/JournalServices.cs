@@ -23,6 +23,7 @@ namespace Services
         // 如果是这种方式，则需要在Startup类上注入每一个接口和类
         public JournalServices(IBaseRepository<Journal> r, IBaseRepository<Journal_Member_Likes> l)
         {
+            // InvalidCastException: Unable to cast object of type 'DAL.Repository.BaseRepository`1[Model.POCOs.Journal]' to type 'DAL.Interface.IJournalRepository'.
             jPo = (IJournalRepository)r;
             lPo = (IJournal_Member_LikesRepository)l;
         }
