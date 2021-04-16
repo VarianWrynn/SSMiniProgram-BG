@@ -31,6 +31,7 @@ namespace SSMiniProgram
 {
     public class Startup
     {
+        //这个是 ASP.NET Core Web应用启动类
 
         public IConfigurationRoot Configuration { get; }
         //public Startup(IConfiguration configuration)
