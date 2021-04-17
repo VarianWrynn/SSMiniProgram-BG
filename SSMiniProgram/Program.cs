@@ -18,9 +18,12 @@ namespace SSMiniProgram
         //这里其实可以看出.NET Core就是一个应用控制台，
         public static void Main(string[] args)
         {
-            //CreateHostBuilder里面只是把配置以委托的都读取存放到List里面，没有执行；
-            //真正开始执行是在Build()方法中执行；所以在我们配置完之前，都不会被执行，即：我们所有的配置都被【延后】了；
-            //Run()就是让主机跑起来；
+            /*
+             - CreateHostBuilder里面只是把配置以委托的都读取存放到List里面，没有执行；
+             - 真正开始执行是在Build()方法中执行；所以在我们配置完之前，都不会被执行，即：我们所有的配置都被【延后】了；
+             -------------------------------------------
+             -一个主机构建器只能构建一个主机，再次构建会直接Throw Exception,可以参考阅读源码；
+             -  Run()就是让主机跑起来；*/
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -44,8 +47,21 @@ namespace SSMiniProgram
                      * - 从前缀为"ASPNETCORE"加载到WEB配置主机
                      * - 讲Kestrel设置为Web服务器并对其进行默认配置 （/也支持IIS集成，不过与Kestrel是二选一关系）
                      * - 在这个委托里面也可以进行自定义配置
+                     *
+                     * -----------------------------------------------------------------------------------------
+                     * - 小结：这里都属于【组件配置】，不属于主机，但是由主机调动；这些组件配置都有拓展类提供的配置方法；
                      */
+
+                    //这里举一个例子，对Kestrel配置进行设置，设置其请求的最大量是1024*3；（默认是28.6 M);
+                    //这里配置完，如果用反向代理Ngix，则也要到Ngix上进行修改请求的Body最大值
+                    //webBuilder.ConfigureKestrel(options => options.Limits.MaxRequestBodySize = 1024 * 1024 * 1024);
+
+                    //设置内置Log组件的日志级别；
+                   // webBuilder.ConfigureLogging(l=>l.SetMinimumLevel(LogLevel.Debug));
+
+
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://*:6000");//改变端口号
                 });
     }
 
