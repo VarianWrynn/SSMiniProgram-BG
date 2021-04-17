@@ -23,7 +23,13 @@
       "launchUrl": "weatherforecast",
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        /*
+         * - 环境变量的名称前缀一定是ASPNETCORE
+         * - 然后后面跟上 Program.cs类里面的 User方法的名称，比如该类里面有个UseUrls方法，则在这里变成ASPNETCORE_URLS；
+         * - 这里的环境变量的【优先级】比 Program类里面 Userxxx硬编码的配置要【低】;
+        */
+        "ASPNETCORE_": "http://*:7000"
       }
     }
   }
