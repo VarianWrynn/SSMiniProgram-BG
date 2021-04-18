@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,68 +11,68 @@ namespace SSMiniProgram
 {
     /// <summary>
     /// https://www.bilibili.com/video/BV1k7411A7p6
-    /// .NET Core×¨Ìâ[Asp.NetCoreÆô¶¯Á÷³ÌºÍÖ÷»ú(ÅäÖÃ)] -ßÙÁ¨ßÙÁ¨
+    /// .NET Coreä¸“é¢˜[Asp.NetCoreå¯åŠ¨æµç¨‹å’Œä¸»æœº(é…ç½®)] -å“”å“©å“”å“©
     /// </summary>
     public class Program
     {
-        //ÕâÀïÆäÊµ¿ÉÒÔ¿´³ö.NET Core¾ÍÊÇÒ»¸öÓ¦ÓÃ¿ØÖÆÌ¨£¬
+        //è¿™é‡Œå…¶å®žå¯ä»¥çœ‹å‡º.NET Coreå°±æ˜¯ä¸€ä¸ªåº”ç”¨æŽ§åˆ¶å°ï¼Œ
         public static void Main(string[] args)
         {
             /*
-             - CreateHostBuilderÀïÃæÖ»ÊÇ°ÑÅäÖÃÒÔÎ¯ÍÐµÄ¶¼¶ÁÈ¡´æ·Åµ½ListÀïÃæ£¬Ã»ÓÐÖ´ÐÐ£»
-             - ÕæÕý¿ªÊ¼Ö´ÐÐÊÇÔÚBuild()·½·¨ÖÐÖ´ÐÐ£»ËùÒÔÔÚÎÒÃÇÅäÖÃÍêÖ®Ç°£¬¶¼²»»á±»Ö´ÐÐ£¬¼´£ºÎÒÃÇËùÓÐµÄÅäÖÃ¶¼±»¡¾ÑÓºó¡¿ÁË£»
+             - CreateHostBuilderé‡Œé¢åªæ˜¯æŠŠé…ç½®ä»¥å§”æ‰˜çš„éƒ½è¯»å–å­˜æ”¾åˆ°Listé‡Œé¢ï¼Œæ²¡æœ‰æ‰§è¡Œï¼›
+             - çœŸæ­£å¼€å§‹æ‰§è¡Œæ˜¯åœ¨Build()æ–¹æ³•ä¸­æ‰§è¡Œï¼›æ‰€ä»¥åœ¨æˆ‘ä»¬é…ç½®å®Œä¹‹å‰ï¼Œéƒ½ä¸ä¼šè¢«æ‰§è¡Œï¼Œå³ï¼šæˆ‘ä»¬æ‰€æœ‰çš„é…ç½®éƒ½è¢«ã€å»¶åŽã€‘äº†ï¼›
              -------------------------------------------
-             -Ò»¸öÖ÷»ú¹¹½¨Æ÷Ö»ÄÜ¹¹½¨Ò»¸öÖ÷»ú£¬ÔÙ´Î¹¹½¨»áÖ±½ÓThrow Exception,¿ÉÒÔ²Î¿¼ÔÄ¶ÁÔ´Âë£»
-             -  Run()¾ÍÊÇÈÃÖ÷»úÅÜÆðÀ´£»*/
+             -ä¸€ä¸ªä¸»æœºæž„å»ºå™¨åªèƒ½æž„å»ºä¸€ä¸ªä¸»æœºï¼Œå†æ¬¡æž„å»ºä¼šç›´æŽ¥Throw Exception,å¯ä»¥å‚è€ƒé˜…è¯»æºç ï¼›
+             -  Run()å°±æ˜¯è®©ä¸»æœºè·‘èµ·æ¥ï¼›*/
             CreateHostBuilder(args).Build().Run();
         }
 
-        //ÔÚÕâÀï»á´´½¨Ö÷»ú£¨host),²¢ÇÒ°Ñ.NET CoreÓ¦ÓÃ°óÔÚÖ÷»úÀïÃæ£»
-        //Ê×ÏÈÊÇ´´½¨Ä¬ÈÏÖ÷»ú¹¹½¨Æ÷(¹¹½¨Æ÷Ö÷ÒªÄ¿µÄ¾ÍÊÇÅäÖÃ£¬µÈÅäÖÃ¶¼Ð´ºÃÁËÖ®ºó ¾ÍÔÚMain·½·¨ÀïÃæBuild().Run();
-        //HostÀàÊÇÔÚ.NET CoreµÄÀ©Õ¹°üÀï£¬¼´: .NET Extension, ¸ÃÍØÕ¹°üÊÇ¿ªÔ´µÄ£»
+        //åœ¨è¿™é‡Œä¼šåˆ›å»ºä¸»æœºï¼ˆhost),å¹¶ä¸”æŠŠ.NET Coreåº”ç”¨ç»‘åœ¨ä¸»æœºé‡Œé¢ï¼›
+        //é¦–å…ˆæ˜¯åˆ›å»ºé»˜è®¤ä¸»æœºæž„å»ºå™¨(æž„å»ºå™¨ä¸»è¦ç›®çš„å°±æ˜¯é…ç½®ï¼Œç­‰é…ç½®éƒ½å†™å¥½äº†ä¹‹åŽ å°±åœ¨Mainæ–¹æ³•é‡Œé¢Build().Run();
+        //Hostç±»æ˜¯åœ¨.NET Coreçš„æ‰©å±•åŒ…é‡Œï¼Œå³: .NET Extension, è¯¥æ‹“å±•åŒ…æ˜¯å¼€æºçš„ï¼›
 
-        //¹¦ÄÜÐÔµÄ×é¼þ¶¼ÔÚ.NET ExtensionÀïÃæ£¬ ¶ø.NET CoreÀïÃæ¶¼ÊÇºËÐÄµÄAPI£»
+        //åŠŸèƒ½æ€§çš„ç»„ä»¶éƒ½åœ¨.NET Extensioné‡Œé¢ï¼Œ è€Œ.NET Coreé‡Œé¢éƒ½æ˜¯æ ¸å¿ƒçš„APIï¼›
 
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            //¹¹½¨Æ÷Ö÷»úÀïÃæ°üº¬ÁËÁ½²¿·Ö£¬Ò»²¿·ÖÊÇ¹¹½¨Ö÷»úÅäÖÃ£¬ÁíÒ»¸öÊÇ¹¹½¨Ó¦ÓÃÅäÖÃ£»
-            //{.NET CoreÊÇÒ»¸öÖ÷»ú¶ÔÏó£¬°üº¬ÁËµ±Ç°Ó¦ÓÃËùÐèµÄËùÓÐ×ÊÔ´£»}
-            //Í¬Ê±»¹»á´´½¨Ä¬ÈÏµÄ·þÎñÈÝÆ÷£¨UserDefaultServiceProvider)
+            //æž„å»ºå™¨ä¸»æœºé‡Œé¢åŒ…å«äº†ä¸¤éƒ¨åˆ†ï¼Œä¸€éƒ¨åˆ†æ˜¯æž„å»ºä¸»æœºé…ç½®ï¼Œå¦ä¸€ä¸ªæ˜¯æž„å»ºåº”ç”¨é…ç½®ï¼›
+            //{.NET Coreæ˜¯ä¸€ä¸ªä¸»æœºå¯¹è±¡ï¼ŒåŒ…å«äº†å½“å‰åº”ç”¨æ‰€éœ€çš„æ‰€æœ‰èµ„æºï¼›}
+            //åŒæ—¶è¿˜ä¼šåˆ›å»ºé»˜è®¤çš„æœåŠ¡å®¹å™¨ï¼ˆUserDefaultServiceProvider)
             Host.CreateDefaultBuilder(args)
-                //.NET Core ÓÐÁ½ÖÖHost£¬Ò»ÖÖÊÇ·ºÐÍ£¨Í¨ÓÃ£©Host£¬ÁíÒ»ÖÖÊÇWebÖ÷»ú
-                //WebÖ÷»úÊÇ·ºÐÍÖ÷»úµÄÍØÕ¹£¬Ìá¹©ÁË¶îÍâWeb¹¦ÄÜ±ÈÈçÖ§³ÖHTTP£¬¼¯³ÉKestrel,ÄÚÖÃÁËIIS¼¯³ÉµÈ£»
+                //.NET Core æœ‰ä¸¤ç§Hostï¼Œä¸€ç§æ˜¯æ³›åž‹ï¼ˆé€šç”¨ï¼‰Hostï¼Œå¦ä¸€ç§æ˜¯Webä¸»æœº
+                //Webä¸»æœºæ˜¯æ³›åž‹ä¸»æœºçš„æ‹“å±•ï¼Œæä¾›äº†é¢å¤–WebåŠŸèƒ½æ¯”å¦‚æ”¯æŒHTTPï¼Œé›†æˆKestrel,å†…ç½®äº†IISé›†æˆç­‰ï¼›
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     /*
-                     * - ´ÓÇ°×ºÎª"ASPNETCORE"¼ÓÔØµ½WEBÅäÖÃÖ÷»ú
-                     * - ½²KestrelÉèÖÃÎªWeb·þÎñÆ÷²¢¶ÔÆä½øÐÐÄ¬ÈÏÅäÖÃ £¨/Ò²Ö§³ÖIIS¼¯³É£¬²»¹ýÓëKestrelÊÇ¶þÑ¡Ò»¹ØÏµ£©
-                     * - ÔÚÕâ¸öÎ¯ÍÐÀïÃæÒ²¿ÉÒÔ½øÐÐ×Ô¶¨ÒåÅäÖÃ
+                     * - ä»Žå‰ç¼€ä¸º"ASPNETCORE"åŠ è½½åˆ°WEBé…ç½®ä¸»æœº
+                     * - è®²Kestrelè®¾ç½®ä¸ºWebæœåŠ¡å™¨å¹¶å¯¹å…¶è¿›è¡Œé»˜è®¤é…ç½® ï¼ˆ/ä¹Ÿæ”¯æŒIISé›†æˆï¼Œä¸è¿‡ä¸ŽKestrelæ˜¯äºŒé€‰ä¸€å…³ç³»ï¼‰
+                     * - åœ¨è¿™ä¸ªå§”æ‰˜é‡Œé¢ä¹Ÿå¯ä»¥è¿›è¡Œè‡ªå®šä¹‰é…ç½®
                      *
                      * -----------------------------------------------------------------------------------------
-                     * - Ð¡½á£ºÕâÀï¶¼ÊôÓÚ¡¾×é¼þÅäÖÃ¡¿£¬²»ÊôÓÚÖ÷»ú£¬µ«ÊÇÓÉÖ÷»úµ÷¶¯£»ÕâÐ©×é¼þÅäÖÃ¶¼ÓÐÍØÕ¹ÀàÌá¹©µÄÅäÖÃ·½·¨£»
+                     * - å°ç»“ï¼šè¿™é‡Œéƒ½å±žäºŽã€ç»„ä»¶é…ç½®ã€‘ï¼Œä¸å±žäºŽä¸»æœºï¼Œä½†æ˜¯ç”±ä¸»æœºè°ƒåŠ¨ï¼›è¿™äº›ç»„ä»¶é…ç½®éƒ½æœ‰æ‹“å±•ç±»æä¾›çš„é…ç½®æ–¹æ³•ï¼›
                      */
 
-                    //ÕâÀï¾ÙÒ»¸öÀý×Ó£¬¶ÔKestrelÅäÖÃ½øÐÐÉèÖÃ£¬ÉèÖÃÆäÇëÇóµÄ×î´óÁ¿ÊÇ1024*3£»£¨Ä¬ÈÏÊÇ28.6 M);
-                    //ÕâÀïÅäÖÃÍê£¬Èç¹ûÓÃ·´Ïò´úÀíNgix£¬ÔòÒ²Òªµ½NgixÉÏ½øÐÐÐÞ¸ÄÇëÇóµÄBody×î´óÖµ
+                    //è¿™é‡Œä¸¾ä¸€ä¸ªä¾‹å­ï¼Œå¯¹Kestrelé…ç½®è¿›è¡Œè®¾ç½®ï¼Œè®¾ç½®å…¶è¯·æ±‚çš„æœ€å¤§é‡æ˜¯1024*3ï¼›ï¼ˆé»˜è®¤æ˜¯28.6 M);
+                    //è¿™é‡Œé…ç½®å®Œï¼Œå¦‚æžœç”¨åå‘ä»£ç†Ngixï¼Œåˆ™ä¹Ÿè¦åˆ°Ngixä¸Šè¿›è¡Œä¿®æ”¹è¯·æ±‚çš„Bodyæœ€å¤§å€¼
                     //webBuilder.ConfigureKestrel(options => options.Limits.MaxRequestBodySize = 1024 * 1024 * 1024);
 
-                    //ÉèÖÃÄÚÖÃLog×é¼þµÄÈÕÖ¾¼¶±ð£»
+                    //è®¾ç½®å†…ç½®Logç»„ä»¶çš„æ—¥å¿—çº§åˆ«ï¼›
                    // webBuilder.ConfigureLogging(l=>l.SetMinimumLevel(LogLevel.Debug));
 
 
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.UseUrls("http://*:6000");//¸Ä±ä¶Ë¿ÚºÅ
+                    webBuilder.UseUrls("http://*:6000");//æ”¹å˜ç«¯å£å·
                 });
     }
 
-    /*Ê²Ã´ÊÇÖ÷»ú?
-     - Ö÷»ú¸ºÔðÓ¦ÓÃµÄÆô¶¯ºÍÉúÃüÖÜÆÚµÄ¹ÜÀí
-     - ¸ºÔð ÅäÖÃ·þÎñÆ÷
-     - ¸ºÔð ÇëÇó´¦Àí¹ÜµÀ
-     - Ä¬ÈÏÉèÖÃÈÕÖ¾¼ÇÂ¼
-     - ÒÀÀµ¹ØÏµºÍ×¢ÈëµÄÅäÖÃ
-     - Õâ¸öÖ÷»ú²»ÊÇÐéÄâÖ÷»ú£¬¼òµ¥À´Ëµ¾ÍÊÇÒ»¸ö·â×°ÁËÓ¦ÓÃ×ÊÔ´µÄ¡¾¶ÔÏó¡¿£¬
-     - Õâ¸ö×ÊÔ´ÊÇÊôÓÚ.NET CoreµÄÒ»¸öÀà£¬ÀàÃû¾Í½Ð Host(ÖÐÎÄÃû½Ð Ö÷»ú)
+    /*ä»€ä¹ˆæ˜¯ä¸»æœº?
+     - ä¸»æœºè´Ÿè´£åº”ç”¨çš„å¯åŠ¨å’Œç”Ÿå‘½å‘¨æœŸçš„ç®¡ç†
+     - è´Ÿè´£ é…ç½®æœåŠ¡å™¨
+     - è´Ÿè´£ è¯·æ±‚å¤„ç†ç®¡é“
+     - é»˜è®¤è®¾ç½®æ—¥å¿—è®°å½•
+     - ä¾èµ–å…³ç³»å’Œæ³¨å…¥çš„é…ç½®
+     - è¿™ä¸ªä¸»æœºä¸æ˜¯è™šæ‹Ÿä¸»æœºï¼Œç®€å•æ¥è¯´å°±æ˜¯ä¸€ä¸ªå°è£…äº†åº”ç”¨èµ„æºçš„ã€å¯¹è±¡ã€‘ï¼Œ
+     - è¿™ä¸ªèµ„æºæ˜¯å±žäºŽ.NET Coreçš„ä¸€ä¸ªç±»ï¼Œç±»åå°±å« Host(ä¸­æ–‡åå« ä¸»æœº)
 
      */
 }
