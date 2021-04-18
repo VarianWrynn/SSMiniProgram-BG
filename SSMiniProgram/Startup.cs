@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -31,7 +31,7 @@ namespace SSMiniProgram
 {
     public class Startup
     {
-        //Õâ¸öÊÇ ASP.NET Core WebÓ¦ÓÃÆô¶¯Àà
+        //è¿™ä¸ªæ˜¯ ASP.NET Core Webåº”ç”¨å¯åŠ¨ç±»
 
         public IConfigurationRoot Configuration { get; }
         //public Startup(IConfiguration configuration)
