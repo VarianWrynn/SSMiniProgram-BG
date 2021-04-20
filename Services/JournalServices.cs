@@ -19,9 +19,9 @@ namespace Services
 
         private readonly string _myUrl = $@"https://localhost:5001/";
 
-        //public JournalServices(IJournalRepository r, IJournal_Member_LikesRepository l)
+        public JournalServices(IJournalRepository r, IJournal_Member_LikesRepository l)
         // 如果是这种方式，则需要在Startup类上注入每一个接口和类
-        public JournalServices(IBaseRepository<Journal> r, IBaseRepository<Journal_Member_Likes> l)
+       // public JournalServices(IBaseRepository<Journal> r, IBaseRepository<Journal_Member_Likes> l)
         {
             // InvalidCastException: Unable to cast object of type 'DAL.Repository.BaseRepository`1[Model.POCOs.Journal]' to type 'DAL.Interface.IJournalRepository'.
             jPo = (IJournalRepository)r;
