@@ -57,19 +57,21 @@ namespace SSMiniProgram
             Configuration.Bind("ConnectionStrings", con);
             services.AddSingleton(con);
 
-            /*services.AddScoped<ILeeTestRepository, LeeTestRepository>();
+            services.AddScoped<ILeeTestRepository, LeeTestRepository>();
             services.AddScoped<IJournalRepository, JournalRepository>();
             services.AddScoped<IJournal_Member_LikesRepository, Journal_Member_LikesRepository>();
             services.AddScoped<IMemberInfoRepository, MemberInfoRepository>();
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<IBook_Member_Like_Repository, Book_Member_Like_Repository>();
-            services.AddScoped<IBook_CommentsRepository, Book_CommentsRepository>();*/
+            services.AddScoped<IBook_CommentsRepository, Book_CommentsRepository>();
 
             /*All you have to do to use this generic repository in ASP.NET Core is to add it in 
              * Startup.ConfigureServices as a scoped service. With this, you will be able to 
              * inject a repository of a specific entity at any time.
              * https://blog.zhaytam.com/2019/03/14/generic-repository-pattern-csharp/*/
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+
+            services.AddScoped<IBook_DetailRepository, Book_DetailRepository>();
 
             /*Create a service for the IUserRepository and inject the MySQL connection string 
              * (from the appsettings.json) into DBContext:*/
