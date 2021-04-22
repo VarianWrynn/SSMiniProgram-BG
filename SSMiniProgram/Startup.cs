@@ -48,6 +48,7 @@ namespace SSMiniProgram
        // public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        //该方法是 配置服务的
         public void ConfigureServices(IServiceCollection services)
         {
             /*To be able to use the connection string anywhere in the code, 
@@ -120,6 +121,7 @@ namespace SSMiniProgram
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        //配置管道的。如果你想在管道里面使用某个中间件，那么首先需要把该服务先注入进来
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
