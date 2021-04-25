@@ -7,7 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+/*
+ * 我们主动获取服务（New Class)叫 主动，正转；
+ * IOC这是被动获取服务，所以叫【反转】反转的是服务的控制权；控制权交给了IOC，不再由你自己主动、任意、随时的创建了。
+ */
+using Microsoft.Extensions.DependencyInjection;//.NET Core的依赖注入框架，我们的IOC实现就在这里面
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
@@ -55,7 +59,7 @@ namespace SSMiniProgram
         //该方法是 配置服务的,可选的，主要作用是【以依赖注入的方式将服务(服务其实就是一个Class)添加到服务容器（IOC)】(IOC是.NET Core的核心概念)...
         /*IOC容器的作用：
          - 注册类型(把服务的一些类，注册到容器里面去，有点 登记簿 的概念）
-         - 解析实例:当我们把某个类（比如A class)注册到容器之后，如何获得这个A的instance呢，传统上是new A();但是在这里是【直接通过容器】来请求这个instance.
+         - 解析实例:当我们把某个类（比如A class)注册到容器之后，如何获得这个A的instance呢，传统上是new A();但是在这里是【直接通过容器】来请求这个instance. 
          */
 
         public void ConfigureServices(IServiceCollection services)
