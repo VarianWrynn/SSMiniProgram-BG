@@ -52,7 +52,12 @@ namespace SSMiniProgram
        // public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        //该方法是 配置服务的
+        //该方法是 配置服务的,可选的，主要作用是【以依赖注入的方式将服务(服务其实就是一个Class)添加到服务容器（IOC)】(IOC是.NET Core的核心概念)...
+        /*IOC容器的作用：
+         - 注册类型(把服务的一些类，注册到容器里面去，有点 登记簿 的概念）
+         - 解析实例:当我们把某个类（比如A class)注册到容器之后，如何获得这个A的instance呢，传统上是new A();但是在这里是【直接通过容器】来请求这个instance.
+         */
+
         public void ConfigureServices(IServiceCollection services)
         {
             /*To be able to use the connection string anywhere in the code, 
