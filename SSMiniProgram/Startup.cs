@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 /*
  * 我们主动获取服务（New Class)叫 主动，正转；
  * IOC这是被动获取服务，所以叫【反转】反转的是服务的控制权；控制权交给了IOC，不再由你自己主动、任意、随时的创建了。
+ * IOC在主机构建器里面就已经产生了。
  */
 using Microsoft.Extensions.DependencyInjection;//.NET Core的依赖注入框架，我们的IOC实现就在这里面
 using Microsoft.Extensions.Hosting;
