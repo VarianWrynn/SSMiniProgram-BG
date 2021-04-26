@@ -32,6 +32,7 @@ using Services;
 //all controllers discovered in this assembly.
 // https://www.strathweb.com/2019/01/enabling-apicontroller-globally-in-asp-net-core-2-2/
 // https://www.cnblogs.com/aqgy12138/p/13419027.html
+
 namespace SSMiniProgram
 {
     /// <summary>
