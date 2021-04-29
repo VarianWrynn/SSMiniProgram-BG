@@ -37,6 +37,7 @@ namespace SSMiniProgram
 {
     /// <summary>
     /// Startup类以及包含的两个方法是约定的，.NET Core启动的时候会检查，其中Config方法是必须的，ConfigureServices是可选的；
+    /// 
     /// Startup有个接口是IStartup,但是在多环境下要基于约定而不是基于接口2021-4-22
     /// </summary>
     public class Startup
