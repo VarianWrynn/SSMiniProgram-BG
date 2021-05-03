@@ -80,6 +80,13 @@ namespace SSMiniProgram
              */
 
 
+
+            /*服务的什么周期：
+            请求一个instance是尤其生存周期的，包含三种：
+            1.瞬时：A类控制器依赖B类服务（瞬时的），每一次请求都是一个新的instance;
+            2.作用域:每一次有客户请求时，类只会实例化一次，在这个请求中，后面的操作都会应用这个B类的Instance;
+            3.单例：整个应用什么周期，只要是向服务容器请求instance,第一次才会创建，后面都是直接使用该instance.*/
+
             /*To be able to use the connection string anywhere in the code, 
              * it's necessary to create a singleton of its model inside the
              * Startup class.*/
@@ -112,6 +119,7 @@ namespace SSMiniProgram
             services.AddScoped<IJournalServices, JournalServices>();
             services.AddScoped<IBookServices, BookServices>();
 
+            //添加对控制器和API相关功能的支持，但是不支持View和页面（即：Web API的模板默认使用的内置控件）
             services.AddControllers();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
