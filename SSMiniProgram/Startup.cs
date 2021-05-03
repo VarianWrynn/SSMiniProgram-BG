@@ -99,7 +99,10 @@ namespace SSMiniProgram
              *  - 如果我有100多个服务，难道我要写100次的服务注册吗？
                 - 如果是内置的确实需要些100次；
                 - 如果是第三方的IOC，可以批量注册，【通过反射】，我们想怎么注册就这么注册 
+                - 属性注入：内置的不行，第三方的可以
                 - 2021-5-3 22:59:26
+                 
+                - - 如果你写了一个第三方组件，该组件需要依赖很多其他的服务，难道你也要让开发人员自己来注入这些依赖且选择生命周期吗?不，你需要创建一个服务拓展方法，【这个是约定】。
              */
             services.AddScoped<ILeeTestRepository, LeeTestRepository>();
             services.AddScoped<IJournalRepository, JournalRepository>();
