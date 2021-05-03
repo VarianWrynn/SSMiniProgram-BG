@@ -94,6 +94,13 @@ namespace SSMiniProgram
             Configuration.Bind("ConnectionStrings", con);
             services.AddSingleton(con);
 
+
+            /*
+             *  - 如果我有100多个服务，难道我要写100次的服务注册吗？
+                - 如果是内置的确实需要些100次；
+                - 如果是第三方的IOC，可以批量注册，【通过反射】，我们想怎么注册就这么注册 
+                - 2021-5-3 22:59:26
+             */
             services.AddScoped<ILeeTestRepository, LeeTestRepository>();
             services.AddScoped<IJournalRepository, JournalRepository>();
             services.AddScoped<IJournal_Member_LikesRepository, Journal_Member_LikesRepository>();

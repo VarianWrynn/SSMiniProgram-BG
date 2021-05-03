@@ -52,6 +52,8 @@ namespace Services
         //        _bookDetailRep = (IBook_DetailRepository)bookDet;
         //    }
 
+        //在这里，Net Core会自动把你已注册的服务给注入进来，不需要你再实例化了。2021-5-3 22:55:37
+        //这种方式被称为构造函数注入；
         public BookServices(IBookRepository book, IBook_Member_Like_Repository like,
             IBook_CommentsRepository bookCom, IBook_DetailRepository bookDet)
         {
