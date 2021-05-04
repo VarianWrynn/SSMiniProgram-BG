@@ -24,6 +24,7 @@ using DAL.Repository;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Services;
+using SSMiniProgram.Extensions;
 
 #if DEBUG
 #else
@@ -126,8 +127,10 @@ namespace SSMiniProgram
 
 
             //Service
-            services.AddScoped<IJournalServices, JournalServices>();
-            services.AddScoped<IBookServices, BookServices>();
+            //services.AddScoped<IJournalServices, JournalServices>();
+            //services.AddScoped<IBookServices, BookServices>();
+            /*按约定封装 两个服务注册方法，同时提供了一个配置委托*/
+            services.AddMyService(options=>options.UserMyController());
 
             //添加对控制器和API相关功能的支持，但是不支持View和页面（即：Web API的模板默认使用的内置控件）
             services.AddControllers();
