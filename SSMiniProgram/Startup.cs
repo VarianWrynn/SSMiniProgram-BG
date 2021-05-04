@@ -169,6 +169,12 @@ namespace SSMiniProgram
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         //配置管道的。如果你想在管道里面使用某个中间件，那么首先需要把该服务先注入进来
+        //- 管道是ASP.NET Core Web应用的核心，我们开发Web应用，其实就是在写管道控件(Controller也属于管道控件的一种）
+        //- 路由、认证、会话、缓存等等都是通过管道来实现的
+        /*
+         * 实际上ASP.NET Core应用一般都是使用某个框架来开发，比如MVC、WebAPI等；这些框架都是建立在某个特殊的中间件之上。
+         * 因此我们可以通过编写中间件来拓展请求管道，在ASP.NET Core上创建我们自己的Web框架。
+         */
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
