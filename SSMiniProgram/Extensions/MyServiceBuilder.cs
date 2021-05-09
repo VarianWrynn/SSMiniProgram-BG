@@ -8,7 +8,8 @@ using Services;
 namespace SSMiniProgram.Extensions
 {
     /// <summary>
-    /// 服务构构建器，其作用就是提供配置，比如这里提供了UserMyController()的配置选项，也可以新增另一个比如UserSheController配置
+    /// 服务构构建器，其作用就是提供配置，比如这里提供了UserMyController()的配置选项，
+    /// 也可以新增另一个比如UserSheController配置
     /// </summary>
     public class MyServiceBuilder
     {
