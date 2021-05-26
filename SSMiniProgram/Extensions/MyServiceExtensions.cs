@@ -21,6 +21,7 @@ namespace SSMiniProgram.Extensions
            var builder = new MyServiceBuilder(serviceCollection);
 
             //调用委托，传递对象进来
+
             //options是泛型委托，其需要传入一个强类型MyServiceBuilder的实例,无返回类型（void)
             options(builder);
         }
