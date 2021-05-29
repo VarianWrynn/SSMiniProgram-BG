@@ -18,6 +18,7 @@ namespace SSMiniProgram.Extensions
         public static void AddMyService(this IServiceCollection serviceCollection, Action<MyServiceBuilder> options)
         {
            //创建构建器
+
            var builder = new MyServiceBuilder(serviceCollection);
 
             //调用委托，传递对象进来
