@@ -27,6 +27,7 @@ namespace SSMiniProgram.Extensions
         public void UserMyController()
         {
             ServiceCollection.AddScoped<IJournalServices, JournalServices>();
+
             ServiceCollection.AddScoped<IBookServices, BookServices>();
         }
     }
