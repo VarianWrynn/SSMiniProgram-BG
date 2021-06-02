@@ -42,6 +42,7 @@ namespace SSMiniProgram.Controllers
         {
 
             LoggerManager.Info("This is a test");
+
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
