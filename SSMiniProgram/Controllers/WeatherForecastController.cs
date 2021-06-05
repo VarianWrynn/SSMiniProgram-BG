@@ -40,8 +40,6 @@ namespace SSMiniProgram.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-
-
             LoggerManager.Info("This is a test");
 
             var rng = new Random();
